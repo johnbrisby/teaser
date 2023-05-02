@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+
+<head>
+  <!-- Basic -->
+  
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  {% comment %} <meta name="format-detection" content="telephone=yes"> {% endcomment %}
+
+  <title>秦皇岛出国劳务</title>
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css'%}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css'%}" rel="stylesheet" />
+</head>
+
+<body>
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+
+
+        
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          
+
+          <a class="navbar-brand" href="#">
+            <img src="{% static 'images/logo.png'%}" alt="" />
+            <img src="{% static 'images/logo1.png'%}" alt="" />
+          </a> 
+
+          <div class="navbar-collapse" id="">
+
+            {% comment %} <ul class="navbar-nav justify-content-between ">
+              <div class="User_option">
+                <li class="">
+                  <a class="mr-4" href="">
+                    Login
+                  </a>
+                  <a class="" href="">
+                    Sign up
+                  </a>
+                </li>
+              </div>
+            </ul>  {% endcomment %}
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="{% url 'index' %}">主页</a>
+                <a href="{% url 'about' %}">关于</a>
+                <a href="{% url 'company' %}">公司</a>
+                <a href="{% url 'price' %}">价格</a>
+                <a href="{% url 'contact' %}">联系我们</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-4 offset-md-1">
+            <div class="detail-box">
+              <h1>
+                <span> 秦皇岛出国劳务</span> <br>
+                正规海外劳务 <br>
+                海外劳务
+              </h1>
+              <p>
+                <strong>秦皇岛齐云商务服务有限公司</strong>，提供专业的人力资源流程服务解决方案，服务项目包括劳务派遣、外包服务、薪税优化、残保金优化以及人力资源流程优化咨询服务等。我司拥有良好的行业背景、多年和多个行业丰富的人力资源服务经验、专业资深的人力资源顾问与服务团队。
+              </p>
+              <div class="btn-box">
+                {% comment %} <a href="" class="">
+                  Read More
+                </a> {% endcomment %}
+
+                <a href="tel:15703387858">拨打电话</a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+
+  <!-- find section -->
+  <section class="find_section ">
+    <div class="container">
+      {% if submitted %}
+        <h1>您的信息已经提交成功!</h1>
+      {% else %}
+         
+      
+      <form action="" method="post">
+        {% csrf_token %}
+        {% comment %} {{form.as_p}} {% endcomment %}
+        <div class=" form-row">
+          <div class="col-md-5">
+          
+          {{form.name}}
+            {% comment %} <input type="text" class="form-control" placeholder="请输入您的姓名 "> {% endcomment %}
+          </div>
+          <div class="col-md-5">
+            {% comment %} <input type="tel" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" class="form-control" placeholder="请输入您的电话 "> {% endcomment %}
+            {{form.phone}}
+          </div>
+          <div class="col-md-2">
+            <button type="submit" class="">
+              联系我们
+            </button>
+          </div>
+        </div>
+
+      </form>
+
+      {% endif %}
+    </div>
+  </section>
+
+  <!-- end find section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding-bottom">
+    <div class="square-box">
+      <img src="{% static 'images/square.png'%}" alt="">
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="img-box">
+            <img src="{% static 'images/about-img.jpg'%}" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                关于公司
+              </h2>
+            </div>
+            <p>
+              齐云商务公司成立于2011年，是一家专业从事出国劳务和外派人员管理的企业。公司注册地点位于河北省秦皇岛市，经营范围涵盖多个国家和地区，包括韩国、日本、新加坡、澳洲、新西兰、欧洲等。
+            </p>
+            {% comment %} <a href="">
+              阅读更多
+            </a> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- sale section -->
+
+  <section class="sale_section layout_padding-bottom">
+    <div class="container-fluid">
+      <div class="heading_container">
+        <h2>
+          主要经营范围
+        </h2>
+        <p>
+          日本、韩国、新加坡、澳大利亚、新西兰、欧洲
+        </p>
+      </div>
+      <div class="sale_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/s-1.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              日本
+            </h6>
+            <p>
+              日本三年五年多次往返，基本材料，
+前期0费用出签付款，接机安置等，全国接单，不限户籍和年龄。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-2.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              韩国
+            </h6>
+            <p>
+              韩国旅游签、工签、以及韩国济州岛长期合作项目
+工作环境优美；男女不限；
+能吃苦耐劳者年龄可以放宽；
+月工资10000一15000元；
+没有技术、年龄大的出国没有合适项目的朋友可以考虑。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-3.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              新加坡
+            </h6>
+            <p>
+              新加坡工签、WP工签、主要职位：食品厂，厨师帮厨，机械操作工，美容师，销售员等。普遍薪水2000+新币
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-4.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              澳大利亚
+            </h6>
+            <p>
+              无前期费用，大包落地付款。入关接机安置等，女工月薪2-4万，男工3-6万。澳洲多次往返签证，留学签证，商务签证。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-5.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              新西兰
+            </h6>
+            <p>
+              新西兰🇳🇿🇳🇿工签<br>
+              工种：力工，木工，瓦工，清淤等。无技术有体力可以。<br>
+              工资待遇： <br>
+              1.基本工资 20-28纽币/小时，根据技术而定。<br>
+              2.保险提供医疗和工伤保险。
+              （澳大利亚申请人可以携转新西兰签证）
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-6.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              欧洲
+            </h6>
+            <p>
+              厨师、帮厨等工作。月薪2-5万
+            </p>
+          </div>
+        </div>
+      </div>
+      {% comment %} <div class="btn-box">
+        <a href="">
+          更多
+        </a>
+      </div> {% endcomment %}
+    </div>
+  </section>
+
+  <!-- end sale section -->
+
+  <!-- price section -->
+
+  <section class="price_section layout_padding-bottom">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          服务价格
+        </h2>
+        {% comment %} <p>
+          There are many variations of passages of Lorem Ipsum available, but the
+        </p> {% endcomment %}
+      </div>
+      <div class="price_container">
+        <div class="box">
+          <div class="detail-box">
+            <div class="heading-box">
+              <h4>
+                01
+              </h4>
+              <h6>
+                亚洲国家
+              </h6>
+            </div>
+            <div class="text-box">
+              <h2>
+                $0～$1.5万
+              </h2>
+              <ul>
+                <li>
+                  日本学签
+                </li>
+                <li>
+                  日本旅游签
+                </li>
+                <li>
+                  日本工签
+                </li>
+                <li>
+                  韩国工签
+                </li>
+                <li>
+                  韩国旅游签
+                </li>
+                <li>
+                  新加坡工签
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              详情咨询
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="detail-box">
+            <div class="heading-box">
+              <h4>
+                02
+              </h4>
+              <h6>
+                澳洲、新西兰国家
+              </h6>
+            </div>
+            <div class="text-box">
+              <h2>
+                $1万～6万
+              </h2>
+              <ul>
+                <li>
+                  澳洲旅游签证
+                </li>
+                <li>
+                  澳洲工作签证
+                </li>
+                <li>
+                  新西兰旅游签证
+                </li>
+                <li>
+                  新西兰工作签证
+                </li>
+                <li>
+                  澳洲留学
+                </li>
+                <li>
+                  新西兰留学
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              详情咨询
+            </a>
+          </div>
+        </div>
+        <div class="box">
+          <div class="detail-box">
+            <div class="heading-box">
+              <h4>
+                03
+              </h4>
+              <h6>
+                欧洲国家
+              </h6>
+            </div>
+            <div class="text-box">
+              <h2>
+                $1万～5万
+              </h2>
+              <ul>
+                <li>
+                  欧洲留学
+                </li>
+                <li>
+                  欧洲旅游
+                </li>
+                <li>
+                  欧洲工签
+                </li>
+                <li>
+                  寿司
+                </li>
+                <li>
+                  厨师
+                </li>
+                <li>
+                  建筑工
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn-box">
+            <a href="">
+              详情咨询
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end price section -->
+
+  <!-- deal section -->
+
+  <section class="deal_section layout_padding-bottom">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6">
+          <div class="detail-box">
+            <div class="heading_container">
+              <h2>
+                公司主要概况
+              </h2>
+            </div>
+            <p>
+              在多年的服务中，我们与各种规模和行业的客户建立了长期稳定的合作关系，并成功地将大量的劳务人员派往了海外。我们的服务得到了客户的认可和好评，同时也为我们赢得了良好的口碑和声誉。我们的愿景是成为国际领先的人力资源服务商之一，为客户提供全球化的人力资源解决方案。
+            </p>
+            <a href="">
+              联系我们
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="img-box">
+            <div class="box b1">
+              <img src="{% static 'images/d-1.jpg'%}" alt="">
+            </div>
+             <div class="box b1">
+              <img src="{% static 'images/d-2.jpg'%}" alt="">
+            </div>  
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end deal section -->
+
+
+  <!-- us section -->
+  <section class="us_section layout_padding2">
+
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          为什么选择我们
+        </h2>
+      </div>
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/u-1.jpg'%}" alt="">
+            </div>
+            <div class="detail-box">
+              <h3 class="price">
+                1000+
+              </h3>
+              <h5>
+                出国人员数量
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/u-2.jpg'%}" alt="">
+            </div>
+            <div class="detail-box">
+              <h3>
+                200+
+              </h3>
+              <h5>
+                个人定制方案
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/u-3.jpg'%}" alt="">
+            </div>
+            <div class="detail-box">
+              <h3>
+                99%
+              </h3>
+              <h5>
+                满意顾客
+              </h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="box">
+            <div class="img-box">
+              <img src="{% static 'images/u-4.jpg'%}" alt="">
+            </div>
+            <div class="detail-box">
+              <h3>
+                最低0元
+              </h3>
+              <h5>
+                便宜费用
+              </h5>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% comment %} <div class="btn-box">
+        <a href="">
+          联系我们
+        </a>
+      </div> {% endcomment %}
+    </div>
+  </section>
+
+  <!-- end us section -->
+
+  <!-- client secction -->
+
+  <section class="client_section layout_padding">
+    <div class="container-fluid">
+      <div class="heading_container">
+        <h2>
+          顾客反馈
+        </h2>
+      </div>
+      <div class="client_container">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/client.jpg'%}" alt="">
+                </div>
+                <div class="detail-box">
+                  <hr>
+                  <h5>
+                    <span>张* </span>&nbsp&nbsp&nbsp<span> 年龄:31</span>
+                  </h5>
+                  <p>
+                    "中介公司的服务非常周到，他们帮我办理了签证和住宿，并且提供了很好的指导和建议，让我感到非常放心和安全。"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="box">
+                <div class="img-box">
+                  <img src="{% static 'images/client.jpg'%}" alt=""> 
+                </div>
+                <div class="detail-box">
+                  <hr>
+                  <h5>
+                    <span>李** </span>&nbsp&nbsp&nbsp<span> 年龄:40</span>
+                    
+                  </h5>
+                  <p>
+                    "劳务公司的管理非常好，他们在工作和生活方面都为我们提供了很好的帮助和支持，让我们能够顺利地适应新环境和新生活。"
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="box">
+                <div class="img-box">
+                   <img src="{% static 'images/client.jpg'%}" alt=""> 
+                </div>
+                <div class="detail-box">
+                  <hr>
+                  <h5>
+                    <span>王** </span>&nbsp&nbsp&nbsp<span> 年龄:55</span>
+                    
+                  </h5>
+                  <p>
+                    "年纪这么大了还能找到国外的工作，非常感谢你们的帮助。如果我有机会再来这里工作，我一定还会选择这家中介或劳务公司。"
+
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+  <!-- contact section -->
+  <!-- --------------------------公司地图位置-------------------------------------------------------- -->
+  <section class="contact_section ">
+    <div class="container">
+      <div class="heading_container">
+        <h2>
+          联系我们！
+        </h2>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="map_container">
+            <div class="map-responsive">
+              
+              <!-- <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyA0s1a7phLN0iaD6-UE7m4qP-z21pH0eSc&q=Eiffel+Tower+Paris+France" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe> -->
+              <iframe src="https://m.amap.com/navi/?dest=119.579821,39.946014&destName=秦皇岛市海港区翠岛天成16-1-1811&hideRouteIcon=1&key=f92a2bebb97b6f1a94c8113620b1e364" width="600" height="300" frameborder="0" style="border:0; width: 100%; height:100%" allowfullscreen></iframe>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-4 col-md-5 ">
+          <div class="form_container">
+            {% if submitted %}
+        <h1>您的信息已经提交成功!</h1>
+      {% else %}
+         
+      
+      <form action="" method="post">
+        {% csrf_token %}
+        {% comment %} {{form.as_p}} {% endcomment %}
+        <div >
+          <div >
+          
+          {{form.name}}
+            {% comment %} <input type="text" class="form-control" placeholder="请输入您的姓名 "> {% endcomment %}
+          </div>
+          
+          <div >
+            {% comment %} <input type="tel" pattern="^(13[0-9]|14[5|7]|15[0|1|2|3|5|6|7|8|9]|18[0|1|2|3|5|6|7|8|9])\d{8}$" class="form-control" placeholder="请输入您的电话 "> {% endcomment %}
+            {{form.phone}}
+            
+          </div>
+          <br>
+          
+          <div>
+            {% comment %} <input type="text" class="message-box" placeholder="Message" /> {% endcomment %}
+            {{form.text}}
+          </div>
+          <div class="col-md-2">
+            
+          </div>
+        </div>
+        <div class="d-flex ">
+          <button>
+            提交
+          </button>
+        </div>
+
+      </form>
+      {%endif%}
+
+      
+
+
+              {% comment %} <div>
+                <input type="text" placeholder="姓名" />
+              </div>
+              <!-- <div>
+                <input type="email" placeholder="邮箱" />
+              </div> -->
+              <div>
+                <input type="text" placeholder="电话" />
+              </div>
+              <div>
+                <input type="text" class="message-box" placeholder="Message" />
+              </div> {% endcomment %}
+
+              
+              
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- end contact section -->
+
+
+
+  <!-- info section -->
+  <section class="info_section ">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-3">
+          <div class="info_contact">
+            <h5>
+              关于我们公司
+            </h5>
+            <div>
+              <div class="img-box">
+                <img src="static/images/location.png" width="18px" alt="">
+              </div>
+              <p>
+                地址
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="static/images/phone.png" width="12px" alt="">
+              </div>
+              <p>
+                +86 15703387858
+              </p>
+            </div>
+            <div>
+              <div class="img-box">
+                <img src="static/images/mail.png" width="18px" alt="">
+              </div>
+              <p>
+                2262667147@qq.com
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_info">
+            <h5>
+              主营范围
+            </h5>
+            <p>
+              出国劳务、劳务派遣、外出打工、出国留学、自费留学、代办签证
+            </p>
+          </div>
+        </div>
+
+        <div class="col-md-3">
+          <div class="info_links">
+            <h5>
+              链接
+            </h5>
+            <ul>
+              <li>
+                <a href="{% url 'about'%}">
+                  关于
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'company'%}">
+                  公司
+                </a>
+              </li>
+              <li>
+                <a href="{% url 'price'%}">
+                  价格
+                </a>
+              </li>
+              {% comment %} <li>
+                <a href="">
+                  Lorem Ipsum
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  available, but
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  the i
+                </a>
+              </li> {% endcomment %}
+            </ul>
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="info_form ">
+            <h5>
+              邮箱
+            </h5>
+            <form action="">
+              <input type="email" placeholder="请输入你的邮箱">
+              <button>
+                订阅
+              </button>
+            </form>
+            {% comment %} <div class="social_box">
+              <a href="">
+                <img src="static/images/fb.png" alt="">
+              </a>
+              <a href="">
+                <img src="static/images/twitter.png" alt="">
+              </a>
+              <a href="">
+                <img src="static/images/linkedin.png" alt="">
+              </a>
+              <a href="">
+                <img src="static/images/youtube.png" alt="">
+              </a>
+            </div> {% endcomment %}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+
+  <!-- footer section -->
+  <section class="container-fluid footer_section ">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> 河北省秦皇岛市海外劳务
+        <a href="#">齐云商务</a>
+      </p>
+    </div>
+  </section>
+  <!-- end  footer section -->
+
+
+  <script type="text/javascript" src="static/js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="static/js/bootstrap.js"></script>
+  <script type="text/javascript" src="static/js/custom.js"></script>
+
+
+</body>
+
+</html>

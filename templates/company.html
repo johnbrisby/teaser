@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+{% load static%}
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title>秦皇岛出国劳务</title>
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{%static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,700|Raleway:400,700&display=swap" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css'%}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+</head>
+
+<body class="sub_page">
+  <div class="hero_area">
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container">
+          <a class="navbar-brand" href="{% url 'index' %}">
+            <img src="{% static 'images/logo.png'%}" alt="" />
+          </a>
+          <div class="navbar-collapse" id="">
+            {% comment %} <ul class="navbar-nav justify-content-between ">
+              <div class="User_option">
+                <li class="">
+                  <a class="mr-4" href="">
+                    Login
+                  </a>
+                  <a class="" href="">
+                    Sign up
+                  </a>
+                </li>
+              </div>
+            </ul> {% endcomment %}
+
+            <div class="custom_menu-btn">
+              <button onclick="openNav()">
+                <span class="s-1">
+
+                </span>
+                <span class="s-2">
+
+                </span>
+                <span class="s-3">
+
+                </span>
+              </button>
+            </div>
+            <div id="myNav" class="overlay">
+              <div class="overlay-content">
+                <a href="{% url 'index' %}">主页</a>
+                <a href="{% url 'about' %}">关于</a>
+                <a href="{% url 'company' %}">公司</a>
+                <a href="{% url 'price' %}">价格</a>
+                <a href="{% url 'contact' %}">联系我们</a>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+  </div>
+
+  <!-- sale section -->
+
+  <section class="sale_section layout_padding-bottom">
+    <div class="container-fluid">
+      <div class="heading_container">
+        <h2>
+          主要经营范围
+        </h2>
+        <p>
+          日本、韩国、新加坡、澳大利亚、新西兰、欧洲
+        </p>
+      </div>
+      <div class="sale_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/s-1.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              日本
+            </h6>
+            <p>
+              日本三年五年多次往返，基本材料，
+前期0费用出签付款，接机安置等，全国接单，不限户籍和年龄。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-2.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              韩国
+            </h6>
+            <p>
+              韩国旅游签、工签、以及韩国济州岛长期合作项目
+工作环境优美；男女不限；
+能吃苦耐劳者年龄可以放宽；
+月工资10000一15000元；
+没有技术、年龄大的出国没有合适项目的朋友可以考虑。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-3.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              新加坡
+            </h6>
+            <p>
+              新加坡工签、WP工签、主要职位：食品厂，厨师帮厨，机械操作工，美容师，销售员等。普遍薪水2000+新币
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-4.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              澳大利亚
+            </h6>
+            <p>
+              无前期费用，大包落地付款。入关接机安置等，女工月薪2-4万，男工3-6万。澳洲多次往返签证，留学签证，商务签证。
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-5.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              新西兰
+            </h6>
+            <p>
+              新西兰🇳🇿🇳🇿工签<br>
+              工种：力工，木工，瓦工，清淤等。无技术有体力可以。<br>
+              工资待遇： <br>
+              1.基本工资 20-28纽币/小时，根据技术而定。<br>
+              2.保险提供医疗和工伤保险。
+              （澳大利亚申请人可以携转新西兰签证）
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{%static 'images/s-6.jpg'%}" alt="">
+          </div>
+          <div class="detail-box">
+            <h6>
+              欧洲
+            </h6>
+            <p>
+              厨师、帮厨等工作。月薪2-5万
+            </p>
+          </div>
+        </div>
+      </div>
+      {% comment %} <div class="btn-box">
+        <a href="">
+          更多
+        </a>
+      </div> {% endcomment %}
+    </div>
+  </section>
+
+  <!-- end sale section -->
+
+<!-- info section -->
+<section class="info_section ">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-3">
+        <div class="info_contact">
+          <h5>
+            关于我们公司
+          </h5>
+          <div>
+            <div class="img-box">
+              <img src="{% static 'images/location.png' %}" width="18px" alt="">
+            </div>
+            <p>
+              地址
+            </p>
+          </div>
+          <div>
+            <div class="img-box">
+              <img src="{% static 'images/phone.png'%}" width="12px" alt="">
+            </div>
+            <p>
+              +86 15703387858
+            </p>
+          </div>
+          <div>
+            <div class="img-box">
+              <img src="{% static 'images/mail.png'%}" width="18px" alt="">
+            </div>
+            <p>
+              2262667147@qq.com
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_info">
+          <h5>
+            主营范围
+          </h5>
+          <p>
+            出国劳务、劳务派遣、外出打工、出国留学、自费留学、代办签证
+          </p>
+        </div>
+      </div>
+
+      <div class="col-md-3">
+        <div class="info_links">
+          <h5>
+            链接
+          </h5>
+          <ul>
+            <li>
+              <a href="{% url 'about'%}">
+                关于
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'company'%}">
+                公司
+              </a>
+            </li>
+            <li>
+              <a href="{% url 'price'%}">
+                价格
+              </a>
+            </li>
+            {% comment %} <li>
+              <a href="">
+                Lorem Ipsum
+              </a>
+            </li>
+            <li>
+              <a href="">
+                available, but
+              </a>
+            </li>
+            <li>
+              <a href="">
+                the i
+              </a>
+            </li> {% endcomment %}
+          </ul>
+        </div>
+      </div>
+      <div class="col-md-3">
+        <div class="info_form ">
+          <h5>
+            邮箱
+          </h5>
+          <form action="">
+            <input type="email" placeholder="请输入你的邮箱">
+            <button>
+              订阅
+            </button>
+          </form>
+          {% comment %} <div class="social_box">
+            <a href="">
+              <img src="static/images/fb.png" alt="">
+            </a>
+            <a href="">
+              <img src="static/images/twitter.png" alt="">
+            </a>
+            <a href="">
+              <img src="static/images/linkedin.png" alt="">
+            </a>
+            <a href="">
+              <img src="static/images/youtube.png" alt="">
+            </a>
+          </div> {% endcomment %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- end info_section -->
+
+
+<!-- footer section -->
+<section class="container-fluid footer_section ">
+<div class="container">
+  <p>
+    &copy; <span id="displayYear"></span> 河北省秦皇岛市海外劳务
+    <a href="#">齐云商务</a>
+  </p>
+</div>
+</section>
+<!-- end  footer section -->
+
+
+<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/bootstrap.js'%}"></script>
+<script type="text/javascript" src="{% static 'js/custom.js'%}"></script>
+
+</body>
+</body>
+
+</html>

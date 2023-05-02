@@ -1,0 +1,2010 @@
+Watching for file changes with StatReloader
+Exception in thread django-main-thread:
+Traceback (most recent call last):
+  File "/usr/lib64/python3.6/threading.py", line 916, in _bootstrap_inner
+    self.run()
+  File "/usr/lib64/python3.6/threading.py", line 864, in run
+    self._target(*self._args, **self._kwargs)
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib64/python3.6/site-packages/django/core/management/commands/runserver.py", line 110, in inner_run
+    autoreload.raise_last_exception()
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/autoreload.py", line 87, in raise_last_exception
+    raise _exception[1]
+  File "/usr/local/lib64/python3.6/site-packages/django/core/management/__init__.py", line 375, in execute
+    autoreload.check_errors(django.setup)()
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/autoreload.py", line 64, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib64/python3.6/site-packages/django/__init__.py", line 24, in setup
+    apps.populate(settings.INSTALLED_APPS)
+  File "/usr/local/lib64/python3.6/site-packages/django/apps/registry.py", line 114, in populate
+    app_config.import_models()
+  File "/usr/local/lib64/python3.6/site-packages/django/apps/config.py", line 301, in import_models
+    self.models_module = import_module(models_module_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "<frozen importlib._bootstrap>", line 994, in _gcd_import
+  File "<frozen importlib._bootstrap>", line 971, in _find_and_load
+  File "<frozen importlib._bootstrap>", line 955, in _find_and_load_unlocked
+  File "<frozen importlib._bootstrap>", line 665, in _load_unlocked
+  File "<frozen importlib._bootstrap_external>", line 678, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/usr/local/lib64/python3.6/site-packages/django/contrib/auth/models.py", line 3, in <module>
+    from django.contrib.auth.base_user import AbstractBaseUser, BaseUserManager
+  File "/usr/local/lib64/python3.6/site-packages/django/contrib/auth/base_user.py", line 48, in <module>
+    class AbstractBaseUser(models.Model):
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/base.py", line 122, in __new__
+    new_class.add_to_class('_meta', Options(meta, app_label))
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/base.py", line 326, in add_to_class
+    value.contribute_to_class(cls, name)
+  File "/usr/local/lib64/python3.6/site-packages/django/db/models/options.py", line 207, in contribute_to_class
+    self.db_table = truncate_name(self.db_table, connection.ops.max_name_length())
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/connection.py", line 15, in __getattr__
+    return getattr(self._connections[self._alias], item)
+  File "/usr/local/lib64/python3.6/site-packages/django/utils/connection.py", line 62, in __getitem__
+    conn = self.create_connection(alias)
+  File "/usr/local/lib64/python3.6/site-packages/django/db/utils.py", line 204, in create_connection
+    backend = load_backend(db['ENGINE'])
+  File "/usr/local/lib64/python3.6/site-packages/django/db/utils.py", line 111, in load_backend
+    return import_module('%s.base' % backend_name)
+  File "/usr/lib64/python3.6/importlib/__init__.py", line 126, in import_module
+    return _bootstrap._gcd_import(name[level:], package, level)
+  File "/usr/local/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 73, in <module>
+    check_sqlite_version()
+  File "/usr/local/lib64/python3.6/site-packages/django/db/backends/sqlite3/base.py", line 69, in check_sqlite_version
+    'SQLite 3.9.0 or later is required (found %s).' % Database.sqlite_version
+django.core.exceptions.ImproperlyConfigured: SQLite 3.9.0 or later is required (found 3.7.17).
+
+/root/pro/teaser/teaser/settings.py changed, reloading.
+Watching for file changes with StatReloader
+Watching for file changes with StatReloader
+[16/Apr/2023 11:32:32] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:32:32] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:32:32] "GET /static/images/s-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:32:32] "GET /static/images/s-3.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:32:32] "GET /static/images/s-1.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:32:32] "GET /static/images/s-4.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:32:32] "GET /static/images/s-5.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:32:32] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:32:33] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:32:33] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:32:33] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:32:33] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:32:35] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 11:32:37] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[16/Apr/2023 11:32:48] "GET /static/images/hero-bg.jpg HTTP/1.1" 200 1894376
+[16/Apr/2023 11:33:02] "GET /about/ HTTP/1.1" 200 5588
+[16/Apr/2023 11:33:02] "GET /about/ HTTP/1.1" 200 5588
+Not Found: /favicon.ico
+[16/Apr/2023 11:33:02] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:33:06] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:33:06] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:33:11] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:12] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:33:12] "GET /static/images/about-img.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET /static/images/s-1.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET /static/images/s-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET /static/images/s-3.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET /static/images/s-4.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET /static/images/s-5.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:12] "GET /static/images/s-6.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:12] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:12] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:12] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:12] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+Not Found: /favicon.ico
+[16/Apr/2023 11:33:13] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:33:14] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:14] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:14] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:14] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:14] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:14] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:19] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:19] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:19] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:19] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:19] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:19] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:28] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:28] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:28] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:28] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:28] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:28] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:36] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:36] "GET /static/images/s-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:36] "GET /static/images/s-1.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:36] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:33:36] "GET /static/images/about-img.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:36] "GET /static/images/s-4.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:36] "GET /static/images/s-3.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:36] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:37] "GET /static/images/s-6.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:37] "GET /static/images/s-5.jpg HTTP/1.1" 304 0
+[16/Apr/2023 11:33:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Yp\x0b®VÀ©M[Å\x19\x99ö-\x17²¹÷ÄT\x89\x92\x18ûÌ×u!\x9fXâ\x11 £\xa0\x86\x94\xads\x1b\xa0tãÌÝ\x18')
+[16/Apr/2023 11:33:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:33:37] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x12×\x91;4ß!~@\x1fô÷\x9f\x04¨\x0c%WÿïC¼ÃQ\x9e\x1d#'ºkÚJ µ*\x18ZþÆ~+cð\x16Jýïë+\x16NKfÚE~!cO\x96ÀÇfZ\x85\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:33:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:33:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x08Í2\x0f«("í\x11¥\x90`/\x9bb\x18Aìí¼.\rpý\x03¿´,\x15z?Ý dRm}8\x9a#I\x98Ø rá\xa0\x89JX\x06õÌx_Ìøz>hÃ\x9fô\x8b?\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ºº\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:33:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:33:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x18n')
+[16/Apr/2023 11:33:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:33:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03a\x7f=DÄ,VÛ#\x94\x1apL#á¡Ô9mµî\x8d_\x82ÐÂ|¬\x91c\x0b¾ m²\x05\x1f÷¢ô\x17.\x06`Í8\x13µ\x17Ý\x00kÝ\x15Pßïñ\x9a\x9a\x8fô\x12Ë\x9f\x00 ')
+[16/Apr/2023 11:33:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:33:37] code 400, message Bad request version ('Uä\x8b\x10è\x01\x074¼Ô?No\x99')
+[16/Apr/2023 11:33:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:33:37] "GET / HTTP/1.1" 200 22962
+[16/Apr/2023 11:33:37] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:37] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:38] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:38] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:33:39] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 11:33:39] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 11:33:42] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 11:33:46] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 11:34:38] "GET / HTTP/1.1" 200 22964
+[16/Apr/2023 11:34:38] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:38] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:38] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:38] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:38] "GET / HTTP/1.1" 200 22964
+[16/Apr/2023 11:34:39] code 400, message Bad request version ('\x84Ó')
+[16/Apr/2023 11:34:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:39] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03è{È\x10¤ésK2ÎZÙ«Æ¡\x06~\t\x01À1¶ç\x9c¬ÈëºÐZ5m ÜJgZ\x98\x95\x8e\xad\x80\x03¾x8\xa0õLÐRÙý\x1es\x1a±$@¤¼\x9f/\x84\x05\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:39] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ÔnÖ\x97©*\x90\x00\x03çÌ\xa0"Ôíî:;ø¯ß\x0cE¼l."¶çñ\x12K \x86_~\x84xk(þ&ï òß\x01Õ§¶\x8fæîçKÛÏ©\x8f_9öá+#\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:39] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ù»º¢\x82¢aá\x0eâ÷G-@\x04D¸f\x1f£\x1b}ù\x8e\x0f±\x10`4¸\x04\x85 D+\x1a\x12c*,70\x1eèÔ³³)Ê\x9a£\x9e¬²\x02?f}½\r¡+\xadÅ4\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:39] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x84¥#¡\x9e¶²|Â\x1d\x9aØt\x1e\x0e~:fc7\x8f:E4ÛJ*ój\x1aZ\x08 \x18ì\x90·«|j^\x00\x8ay©\x17¡ñQ\x8be«W\x1aÚ_Z³Ú5\x85uÅ\x17Á\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:39] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03')
+[16/Apr/2023 11:34:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Not Found: /favicon.ico
+[16/Apr/2023 11:34:41] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:34:58] "GET / HTTP/1.1" 200 22964
+[16/Apr/2023 11:34:58] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:58] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:58] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:58] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:34:58] "GET / HTTP/1.1" 200 22964
+[16/Apr/2023 11:34:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ø$FÇÚ1Ý\x13Â\x1cÊ\x0b[\x11\x0f\x00¾´\x99ÇÑS×w5ë¹\x85\x96ßFX ì\x95xÞlj³J`àù.2§H/Ò¦=ã\xadøh\x95¾Ù¬µKÂ\x04<\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x8a\x81]\x81\x99Û¦ñþ\x18ú\x98\x91/,¸<p=¸\x80ö\x95ÙªFª\x84GQWß')
+[16/Apr/2023 11:34:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:58] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03b\x04}ó\x9aÕÕÝK[÷\x0b\x1d\x9f\x95\x17²óªó«\x81Ýç¼ÖÅ#\x03ºÎ% \x1d×\x97lÒñ\x80À0\x1a´\x02Á~e§;}ù'\x00\x01\x90O]\x7fµ\x15¬Ë7\x03\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:34:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:59] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03iì³`P\x96Pç\x81\x82°\x96\x8fì)·\x12Ü#\x03\x9fîF\x0bÔ\x06U|iCj$ Mlô1S\xad¼Ø\tj\x0eê×\x06¬\x96M\x9dàþ\x80Ù\x94«-ÒØóA\x14=u\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:59] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ißÏ=\rp}F\x00ÂZç¨\x11â\x88j\x9aÌÙ\x99Q±ú·QÌ\x17Ë\x05OY 6ãö´±Rúà\x0eê\x8bÃ³\x90ñ¿ÄþÊÉ\x95¥T\x95\x95'\x0c7")
+[16/Apr/2023 11:34:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:34:59] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x13«b\x8a`wa½Ð\x9bNt\x981¦®ü½æ\x12\x9f³ý8\x88t4þãßSk ¡\x16\x06\x1c¡ãäAuMÇ\x9c¿T¬\xad¶\x0f\x81\x16\x18E~ET\x7fk@ó?\x15%\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:34:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:35:11] "GET / HTTP/1.1" 200 22964
+[16/Apr/2023 11:35:11] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:35:11] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:35:11] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:35:11] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:35:11] "GET / HTTP/1.1" 200 22964
+[16/Apr/2023 11:35:11] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¬M\x14¡\x98á\x08÷\x9eï\x90Ôµ\x0e4P÷)PU]*\x8c\x9fPh«Æg,µ¾ 6\x94×\x8c\x9c&k\x95%8\x94\x17\x12ÂR®9\x8e,\x1fÌ\x1bcî\xa0J%i¦#\x89\x82\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:35:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:35:11] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03«¤Öù.\x97û\x82\x83\t¶¦õ\x8aRÁ\x8e\x17\x85ò\x16G¬\x89Z\\\x89«\x95³\x82¹ \x8b\x19éG\x05\x14\x9cE;½º\x12\x91jó\x95NáR\x060³ÊE]Lô[Õ])U\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:35:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:35:11] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03í\x7f9\x12ßýÎH¨'\x08\x8c«ÌÝ\x8e\räõ IÞn\x15\x90^Ò\x81L8çT æ¸G\x1b^Ä¡mYâ\to¿`qã\x17¤\tP\x06N?\x98\x85\x9e×£Aºfa\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ZZ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:35:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:35:11] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03È\x8c¶\x05\x03\x17Fû\x0c¯Îåõ\x0e\x8d1J\x83\x08\\\x10Íñ\x07\x915{Iøq¦þ ,·f\x96æ|&Eeî\x9cÊ\x9b\x91,!\x0eÈßüE[\x91þ¬¡-d\x92õFM\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:35:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:35:11] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x1d[\tèôÔ\x9c\x8b\tçØ¿nä\x8b±M\x08\x01¨*')
+[16/Apr/2023 11:35:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:35:11] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x037Ð,â\x0b×þ\x1dÄÄ±y@ÇùI¾U\x9eÆGo¥ÜËuI¼{e\x06· 6µ\x83\x98Ê\x12Y4q\x8bq'\tì£\x0eý©÷âê\r\x01h-\x9c\x0e¼Ö\x00 ú\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:35:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:15] "GET / HTTP/1.1" 200 22954
+[16/Apr/2023 11:36:15] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:15] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:15] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:15] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:15] "GET / HTTP/1.1" 200 22954
+[16/Apr/2023 11:36:15] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03A\x11\x9a´áÌ8æé÷êÕ\x02T\x03îä\x129ÈóßhU´fÏ%î£\x90\x8e')
+[16/Apr/2023 11:36:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x14C\x97\x81\x19\r#\\\x1fëN:\xad\x18*AÇ\x0c\x8f\\]\x953«^&óF\x8dJrh \x96Á\x95yäVâcNc\x0b»/ïÆZ\x98\x110ö\x82¼\x8dÚÉ\x90)M[\x96')
+[16/Apr/2023 11:36:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03qª\x1b\x81+Î"Û±\x89\\nË\x02Ëª\x11|,xÜ\x18°½tN\x19¼¾V\x80å ±ç\x1eþ\x93¨üGzN;\x03{\x06\tÜ]I¡\x14þÅ¢»2=í]Ùâ¯\x8c\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x10/Íù¥\x19@Ù<, À\x89\x1c¯ó×\x93ÄIì&w\x81%\x191Ñ\x1a\x7f\x99) t®LÔ\x9emn\x9b\x91Á3w§UY-ép\x0e\x7f|<\x85DÅ\x7fªñ9ÿ,á\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03`Å\x1f"\x05ú\x84</ò¦é\x0c~Í\x1cÈ\x19¼]\x8d\x91?Oð=8í\x88Àfñ Øð-Ò+Ìú9^£ùu\x91å,Í1\x16æ\x9fw\x91ýÚb\xa0^¨\x1cR\x90ü\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:15] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x92rÄ_úi\x0b\x7f\\èÐ#a¶\x92è\x1e\x8e¼\x9ah4^È²¸±\x82\x1d®ë\x84 ')
+[16/Apr/2023 11:36:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:36] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:36:36] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:36] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:36] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:36] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:37] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:36:37] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03]Ä\x99qeû\x89åBszOq\x1aj\x0c)àgùÿítgj(&þÂË\x10Ê \x17=Æ7ÊtâvíMcF\x97KEÍ\x00ÙM; ÿ:±\x18\x1a'?dJgY\x00 ")
+[16/Apr/2023 11:36:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:37] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x96_öÞ\x8f]\x14f\x90lÛÆ\\\x19\x00×'¿\x18nÚ?-#ð\x16¯\x16² Q- \tñ\x1e4\x9fkÚ\x9fð*\x1e¹þ\x84B5h\x03§ëò\x84éùòOñûs\x10kB\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93")
+[16/Apr/2023 11:36:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03»î\\@\xa0,¸\x12\x1a¶\x95"Xúé\x9b\x12\x89Õ\x83ñÂ¶ý\r%ÝºE/³Ð \x8d-ø~k\x92\x1a\x91ÇÍAK½K\x93\x93\x1c\x07´\x9d~\x83\x86Õ¾©\x95J¯C\x90\x82\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x02\x8d$²/&ã¡¶M«\x0fÂqd\x04¶m`iê-NDÏ\x1b\x0c´£\x08ih \x08\xadw\x1asª\x0eú°e\x96\x14éU¡¡eà9\x8c-ßU\x1eP\xa0%^·?J1\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:37] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:37] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¥|\x14\x94o)\x90Õ;\x92;\x10\x8b\x94rÞL9TC\x96K«üwx¾î\x1cWC" \x8ah&\x02G ó¼\x0e\x00d.[w%Ó4\x97\x8cçÙu\x8c¥æ$¡qï·¼ì\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:39] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:36:40] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:40] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:40] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:40] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:36:40] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:36:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x08\x00(ð#Æ(\xa05d\x1fÍÝF=ÓÞkÊK"®çÖ\x92\\\x8d0¤\x84NÊ T\x7f\x08jaö\x9cô ª¥\x15mLPð\xad"a\x96»L8<¼Ô©î\x93P \x16\x00 ')
+[16/Apr/2023 11:36:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03V')
+[16/Apr/2023 11:36:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:40] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x0bk\x03èÆË\x98=ÊR\x82Ü©þÑÂx#\x1c¬\x8a\x19#\x91\x14\x06ù\x06ü';* \x038\x02\x9f×\x1f\x06\x1e\xa0XFb\x97\x00yMâ·á,F\x9f\x93\x00\x8dF\x0f\x00P\t\x9be\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:36:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ï´5vhõbª\x8e\x88»Z\x97#Ög\x06¶w9~ø\x85\x1d\x83÷n\x85ù \x8bV ]÷;\x82G\x8d¾\x81 W\x8c\x01#¤2\x9b7\x9e\x13\x93Ì¡ÇÃö\x9b&b\x89_½I\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x87L\x13fJ\x18\x96®ìþ\x16\x7fÜÈå\\Àô³û`Æ\x85\x1aü\x85Ê\x0fåRÖ\x0f øï\tÍÑl\x00\x98N\x88ñï\xa0\x99I&\\+H~`¨gÅY=\x9d.bç\x9b\x94\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:36:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:36:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x03"Àü®%')
+[16/Apr/2023 11:36:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:09] "GET / HTTP/1.1" 200 22949
+[16/Apr/2023 11:37:09] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:09] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:09] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:09] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:09] "GET / HTTP/1.1" 200 22949
+[16/Apr/2023 11:37:09] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Å\x16\x10\x05Z#Ú÷\x9aÑ\x81\x06¿\x97\x84I%÷\x18\x87\x89Ó\x80p"ºE½2´x\x05 <ÓW\x98¢ÿ¤¾\x00\x91\t\x95\x05måV²ì\x8a\x07å\x0cø\x9dú\x1f\x1fA£ããå\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:09] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03£ú¸\x04\x83a\x03Ù\x9fôX4¬«ª\x82\x82jö¬úCyyHL\x86.,Â\x88\x98 tÚ$\x06$<\xa0u\x92\x13±mÛ\x85@F\x9a7>ÓÅûÍGiê\x8be\x92Åäç\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:09] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ï\x80ôÀ!æ¼Ñj\x84d\x83±_W\x0e$[\x02Ê\x9d¢±Ù«ÝÇèDXÖl ¢ócgqr²\x94±ÀßÔs4:ñ,\xad'Ù\x06Ð\x08Ñ\x1f\x05åÌðÁ<p\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:09] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x19pÀÙ¸úµ"°ÒÛc¼Û÷WHªu¬¬*x½Ì;¥\x9aH\x9c=ð Xñ¨á\x17¸½û\x0cª\xa0ëÓÄcýe´\xadB-¼ä¼Xí]Ý%(¾¯\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:37:09] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03g\x8dG')
+[16/Apr/2023 11:37:09] code 400, message Bad request version ('\x92ÙÛªèçVH]=3\x15êK')
+[16/Apr/2023 11:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:12] "GET / HTTP/1.1" 200 22949
+[16/Apr/2023 11:37:13] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:13] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:13] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:13] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:37:13] "GET / HTTP/1.1" 200 22949
+[16/Apr/2023 11:37:13] code 400, message Bad request version ('4ôë<\x14}Ç\x11')
+[16/Apr/2023 11:37:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:13] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ð<3NrorhÝ\x82qÐÆ\x88G\x8a\x96\x93\x85\x8d[\x0bÌ\xadñdV\x12Ù:\x06d Z')
+[16/Apr/2023 11:37:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:13] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03}ö¯``,\x8e.\x05î\x97\xad^r±·Ô÷\x98Cò\x92à¬\x9eê\x94ëÉä~~ M¤À\x01\x85ùnàü\x165Â*±`\x17p\x88#\x08ÒA\x1e\x15¬î¬<\x7fkg³\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:37:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:13] code 400, message Bad request version ('\x13\x00\x99+8bÕ+îYT\x90U\x80JS\x93C:\x95ÉL\x87.»b')
+[16/Apr/2023 11:37:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:13] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03{ê0Ï+À3\x1bÄ&µ\x91kì<xßoU\x84¯ÅqÏ\x9e¶ñÊ\x02ØãÖ Ò4\\ÅbO\x1b\x1b\x03}7îù=gjÚ\x0b\x9aëÿQ\x80\x8f\x8bÝ\x84¢¸\x01h\x9a\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:37:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:37:13] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ldK\x88å\x93%ÙíÜëõGÀM½~ÌØQc<\xadØäÄD\x13ø\x8d\x97+ uv"\x8c©Un\x8b\x03¤L`ïmo\x81øª\x1c7ÜK´\x056{\xadÑý4Ê,\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x9a\x9a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:37:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:41] "GET / HTTP/1.1" 200 22948
+[16/Apr/2023 11:38:41] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:41] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:41] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:41] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:41] "GET / HTTP/1.1" 200 22948
+[16/Apr/2023 11:38:41] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03×\x9càÜ\x07mS/¨t \x80þG\x01\x80ó']¿.\x96m\x92¨k1x\xad\x9crÉ 1f®býQ\x98\x8c:óÅwô{\x81QÈ\x8eÂ;\x96®\x87AÂjÑ\x1b90ÿ\x1b\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:38:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¾½(SÛþ\x10ü£"¶¤!+®\x15bþ\x18¸1®ê\x1c\x97þ¹\x88[\x97ôZ ·zkªäºå\x1cg\x8e\x08\x17ðÓ.®)¡p¥¼ð¥ØÒ\x07\x11*ÊLä\x8b\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ÍNÕb¦4ÊÉ\x05£\x9e\x07Áa)\x9b¢\\ê\x8e\x0e8õ\x03K\x96\x11[½\x11J\x90 ¦\x82r\x8dß\x88xV\x8còs\xa0ìÇÕiE\x04i\x8d¢ÿ§HÊMõOó#\x1eÌ\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ãÆ\x0eÔ~Â\x12#´#Æeí\x149v2Õ¬\x0b¡½ùZ|kE\x03~ÅµÇ \x81ÑÔÒÎÈê¹ã\x957¦\x8e\x94\x12´é¥k\x1cðæ=NIÅ\x17Å\x8a\x87\\>\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Äq\x19è£\x98\x03\x92Ô{à"+Ä\x18\x06ñïoû³=\x8el6Á)\\*þ\x92û öð\'¬Dè×Ï@<6l\x0c\x84ñwÜ\x0eþ/\x01QRÆª\x16ð\x0fXxy=\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:41] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ì\x89V*A°\x7f¸,ÿ\x9cXÞFÚ©\x95ék\x11d¡m\x91¢é\x9bî®`9\x1f Tûä&\x88ä3]ÈKÍkÞ\x83×\x19w/¯Ø'f.¶\x8fs\x01\x94\x0f\x0cý\x96\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:38:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:57] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:38:58] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:58] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:58] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:58] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:38:58] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:38:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¬\x96\x89a©MI¡@\x06c\x90I¹u\x93_\x80\x8d\x06ç\x1dN)\x86«ó\x8fô]\x9cù Aá\x8dÎñ\x8f\x1fÎÚ\x12_?´®Ç\x12lÅÈ%#>ÄÑh>ÅÃK\x04\x11\x81\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03LÇÀ\x98&\x07V\x12E)\x88Màñ\x1b}3\x81Ö\x1b\x8cþ\x0b\x9bûQ\x80Ü»íµ3 Þc\x98\\ÈH\x95é\x98\x7f\xa0X¾\x88Û\x9aõÊ\x15\x00\x13Ôð\x94\x13Î\x9e\x13®d2ï\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03~ÆI\x93ÙÔ9\x8b²ê&]ÓFõ$\x9cÜøl\x8a')
+[16/Apr/2023 11:38:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03,mÝ:â`\x7f¡õâ\x11\x87ºéOonw\x14Dã³Ýþyò\x1ey\x9c@VK o\x05\x83ùÿ\x85Lt\x1e\x8d\x80C\x0c8Ï)F~$ª´äÝ\x8fQòý\x00\x17\x7fS\x9b\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x031\x8a\x90ó¿\x0fj\x8a4ÌùX\x8að\x895ù%°4Í]¤\x8a<O\x06¦LZsO')
+[16/Apr/2023 11:38:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:38:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03<\x06\x11\x08m\x05\x13\x9ch\x06\x87BH²7Û{þMç\x89ó[ÞÌÑ\x80[\x04ýhâ =*@F»²\x9d¦n\x01R\x1b\tÜx:ë\x95$qJ\x82°½Ï@g\x98\x19<l,\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:38:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:39:12] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:39:12] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:39:33] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:39:34] "GET /static/css/style.css HTTP/1.1" 200 17399
+[16/Apr/2023 11:39:34] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[16/Apr/2023 11:39:34] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[16/Apr/2023 11:39:34] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[16/Apr/2023 11:39:34] "GET /static/js/custom.js HTTP/1.1" 200 408
+[16/Apr/2023 11:39:34] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[16/Apr/2023 11:39:34] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[16/Apr/2023 11:39:34] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 11:39:36] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 11:39:38] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 11:39:40] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 11:39:42] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:39:43] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:39:44] "GET /static/images/location.png HTTP/1.1" 200 456
+[16/Apr/2023 11:39:44] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:39:44] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 11:39:44,705] - Broken pipe from ('223.104.102.205', 9169)
+
+[16/Apr/2023 11:39:44] "GET /static/images/s-6.jpg HTTP/1.1" 200 200704
+[16/Apr/2023 11:39:44] "GET /static/images/square.png HTTP/1.1" 200 406
+[16/Apr/2023 11:39:44] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:39:46] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 11:39:46] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[16/Apr/2023 11:39:47] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[16/Apr/2023 11:39:50] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[16/Apr/2023 11:39:50] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:39:50] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:39:52] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 11:39:56] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:39:56] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:39:56] "GET /static/images/phone.png HTTP/1.1" 200 385
+[16/Apr/2023 11:39:57] "GET /static/images/prev-white.png HTTP/1.1" 200 227
+[16/Apr/2023 11:39:57] "GET /static/images/mail.png HTTP/1.1" 200 358
+[16/Apr/2023 11:39:57] "GET /static/images/next-white.png HTTP/1.1" 200 231
+[16/Apr/2023 11:40:07] "GET /static/images/hero-bg.jpg HTTP/1.1" 200 1894376
+[16/Apr/2023 11:40:17] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:40:17] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 11:40:17] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:40:17] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:40:17] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:40:17] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:40:18] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:40:55,475] - Broken pipe from ('223.104.102.205', 26888)
+
+[16/Apr/2023 11:40:55,476] - Broken pipe from ('223.104.102.205', 26876)
+
+[16/Apr/2023 11:40:55,476] - Broken pipe from ('223.104.102.205', 12315)
+
+[16/Apr/2023 11:41:12] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 11:41:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:41:56] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03\x8dÚBm\x00\x1b3\x12VT0#4EæJ\x92Ï¿Ì\x11·ZB¼Ô\x06\x88au2ê\x00\x00BÀ\x11À\x07À\x13À')
+[16/Apr/2023 11:41:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:41:57] code 400, message Bad request syntax ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03iÜï¥\tN\x16\x1f1Åò.Ê¦yà-\x18@_Ø\x1c\xade6\x14\x0fÆì¸úÈ\x00\x00BÀ\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 11:41:57] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:41:57] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03\xadø"\x89Np3¥Sè\'ÓéÑx\x84_èaJà¢\x88\x80í\x0fµ<\x11½\x9eN\x00\x00BÀ\x11À\x07À\x13À')
+[16/Apr/2023 11:41:57] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:38] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03.\x08C,ø\x85Ö1ð@\x0eé\x92\x8càBÅaÔ<l\x98=À§Vö\x85 WµÔ §mè¹]1è\x0efBª\x9eR\x15²4ýàmë\x83\x19J6è§\x05Ä\x8b\x1aRß\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:38] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03M\x1e\x1aO¿¸!\x84D\x9bÅÖ\x1aY\r½==Ú.%o\x12yg-ZÙó¼\x9b\x8e ç\x95\x0c6\x06`X<@#\x05¼\x87G\x80\x152\x98xîÂ"°ª/Ã\x8bí¿ÑñÈ\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ZZ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:38] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03DzDhåå=½\x87Dµ\x9f\x90ü'MÜ\x1e¿ÄW6\x01å,¡FòFýa\x08 µ( ñHµ\x1fÖi\x08á¹lð\x02Ó¯ÒYÆÌï9.}%à\x8bQ\x90¥h\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:42:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:38] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x92Á4º\x91')
+[16/Apr/2023 11:42:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:38] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ÏV\x07®4¨\x91v\x8d8\x86\x14Ð1\x9cC\x1f\x99á£\x8cª\r}ïâbU\x0bÃÂw H\x1fÞ\x15\x1d\x91ÎbÍ-(~TÙ/g;/pTK=&\x01'\x1c\x10\x08ís`W\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:42:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:38] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03vâ:ã\x9eÏ\x16G\x9d\x9cN\x863÷MÃ\x05É7é%\tâU|ý\tE¯\x88\x07¯ Gÿá\x04z¶\x91¨\x0bE9oh\x0b1#{W¡²±Ô9×îä¤6\x92½,\x10\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:38] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ö\x99Çhª±\x9ffP')
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x94äë¬%¯×\x01]\x95Óµn\x8eÄ@\x81\x85"\x14æMÙÄU}\xad°;\x04\x80ù ¼5]þÓ+0u|µ\x9b?Æ:ÒAXYZíVN; r\x8a·\x99B&\x03l\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ç\x9d\\@\x96ß\x99§sjâÍ¢\x91LÑ\x07¼]é\x0e\x1fr±ßµ\x88Výto\x0e \x08\x88âüîlÚÄm\x96¥\x90©F ×a\x180ª0\x05~©£\x92Ú\x94ûþ3â\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x16\x1c)¤N¡cì0/Ñ\x0e\t3\x06\x06¾Í\r\x99¡Ð\x11\x03\rU?é\x99³®É ¼§\x0btì,ð;Æ\x89!\x10¦ö¼\x0c;7%U\x8awÕQ¤\x11f¬\x17\x91ËF\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¢Ç\x96ch\x0f\x0cTóQþ\x8a\x92ç\x0e¡â\x11åIAGªÓî³:Ø\x0bë8ó Øøqôq.O\x84\x8aÀ3Àq\rIgì\x0bá\x8c`\x069;zñ&¥Úz\x1c\x00\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03î\x055½')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Á\x98\x8aÍ^u©*¹\x9aT\x98uèòù$j\x84½\x18\x87.[ö\x8f2¿n´Ï¿ I<\x16@`T\x8f\x86þJøS½\x00M\x81\x84½Q\x8a\x0cÅ8u%\x9d\x10l\x16ðiÙ\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9e\x96á\x83H$#\x0404T\x95u¾¦×\x1fÆ\x1bµê"0©Ë\x13\x00\x9fGJä¶ k\x84ç\x84\x9b½ç[DÎb\x1c52©Áöïh\x0f}sãª·ïC\xad\x87\x11\x937\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x036XÌð\x00¹]\x8e¡üüÕÕ\x9d¿\x82\x87X´ZCÚ\x9eá¼^\x13æÔ\x97ùK \x92\r1ZÚ\x0biöm\x996õX\x82ú\x81ur¡¢Ú\x90\x9d\x8eÅÃPõ¤Ö<x\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x84Á¤NpMtÌ{lèã\x98Ç\x87^¿ìú¹Ë²\x00k©¯tÆ]\x14ó\x02')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x89¾\xadtä\x0cÅ\x857\x15*:\x1a+9÷sÛZG^\x02&¾:\x07\x8a\x17\x0beÔ\t \x89C°¯°Ut\x00\xaddøfÒ\x10\x06¶\x83c\x9dí³\r\x8cü*TØþyÜ\x11')
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:40] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03>\t§a\xa0¿ýF\x1câ\x18À'ÌÄC`ó\x96éâÇ\x9d(\x7f\x13(ùÕ.N& #ú\x9fwU&\x88Dÿr¥Ô\x8eb#¹\x89®Ý\x90[1\x12a\x8a\x17Ñû\\¶£\r\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93úú\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:42:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03.m(OQ\x05(Ù\x12\x10¾ùQa \x0c\x82ÜS?w\x04\x19\x0eV\x14·Z¥#O+  >$[¨;2\xa0²_\x13.\x01\t²ïÂAf\x88úÚ\x81\x81,ÁoágGÛÐ\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03@G\x05#\x9a°ÙQvÀ')
+[16/Apr/2023 11:42:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:41] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03{*l\x9d£P"\x08`\x1eå|=`P\x11¶\x14\x89C¶\'í=\x00@ý8Þu*Á Fë\x0fìhÂz\x15xúr\x918\x19¬Ïº6(ú$\x15û\x02w£\x951Q\x02E\x11\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93**\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:41] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03f\rÕ\xa0+B'~\x9a\x8a&\x08HÝ¡2rl>4\\\x85a\x9aö³:f\x8a\x03³| ÒÊ¸½ýêÕÚ\x98;Üôa\x8càÉ¾a\x0f\x80\x84\x01\xa0\x0eñw\x9bÈo\x93'í\x00 ")
+[16/Apr/2023 11:42:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:42] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03?ôí(îÝ¦´|z-\x0f´¥_:\x93\x03Tm\x99S\x1eg·ñ\x8cô£*\x0f6 4n4À¾ÊßÁa@ìªHîü³(\x1e\x95£P@>a\x06\x98\x08\x01Ä;U\x13\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:42] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x032m]¬Ê\x9bZ_o²U¿\x13Wî\x94Ü?\x1fZn.âï\x81A\x94²\x9d\x99O\x06 £Ëä\x04Z¬(âÇ\\>¾¸bO2Ã\x08Ì\x8b?/;J\x9déI\x94çcö÷\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ºº\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:42] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03')
+[16/Apr/2023 11:42:42] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x036*&½n^#~syáõ_dòb\x9baÚ\x17ªKþ\x15û@köMn>D YC\x19qby5.ªnA2½ùöxþ\x85\x95§Ë\x91\x83\x80\x01¿\x85Ûé.\x03;\x00 ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:42:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:42] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:42] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:42:42] "GET /static/css/style.css HTTP/1.1" 200 17399
+[16/Apr/2023 11:42:43] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[16/Apr/2023 11:42:43] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[16/Apr/2023 11:42:43] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[16/Apr/2023 11:42:43] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:42:43] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[16/Apr/2023 11:42:43] "GET /static/images/square.png HTTP/1.1" 200 406
+[16/Apr/2023 11:42:43] "GET /static/js/custom.js HTTP/1.1" 200 408
+[16/Apr/2023 11:42:43] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[16/Apr/2023 11:42:46] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 11:42:46] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03é4R\x11þ\\Tüp¨\x19¹ÖÆ\x1bßIp\x01¶*\x98\x89ldÀùµ\x87ô_\x19\x00\x00BÀ\x11À\x07À\x13À')
+[16/Apr/2023 11:42:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:42:48] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 11:42:48] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 11:42:50] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 11:42:52] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:42:54] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 11:42:54] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[16/Apr/2023 11:42:54] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 11:42:57] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:42:58] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:42:58] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:42:58] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:42:58] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[16/Apr/2023 11:42:58] "GET /static/images/location.png HTTP/1.1" 200 456
+[16/Apr/2023 11:42:58] "GET /static/images/phone.png HTTP/1.1" 200 385
+[16/Apr/2023 11:42:58] "GET /static/images/mail.png HTTP/1.1" 200 358
+[16/Apr/2023 11:42:58] "GET /static/images/prev-white.png HTTP/1.1" 200 227
+[16/Apr/2023 11:42:59] "GET /static/images/next-white.png HTTP/1.1" 200 231
+[16/Apr/2023 11:43:01] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+Not Found: /favicon.ico
+[16/Apr/2023 11:43:01] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:43:04] code 400, message Bad request version ('Ütò²Y')
+[16/Apr/2023 11:43:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:04] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\xad\x8døü`Ø\x9d\x95á÷\x8d;\x9cYäRÿ\x9e/©\xa0û¾\x86U\x03*\x8bn§Ë@ ¦x\x04\x97(\x04-\x1bêÉ¤\x86óÐÖ/\x08¿*\x9c\x92À·Òkã`\x19ðV\x00\x8f\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:04] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ëÃ\x91%(\x07\xaddf-Øk¤Þ\x88\x03\x8cV1\x9b_Ü\x1b\x85'*)ÒLaXT \x93´\x15\x01\x98è\x98Úb\x89ÉªAüã¬J\x15P¼\x00êµ}cñTÃY2U\x95\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:43:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:04] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ò\x9e\x11\x8eY}c¾©\x8eÈ÷o»\x04\x955p5\x05\x94\x87é%Ás\x83}ÈÂþ; ¢3\x96·*ÕO\x0c#òá\x8cUÏÀÅ\x07÷¤kRÚ¢\x99ç\x9eîp\x1d{\x99\x1f\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:04] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\t\x8a¥¢ø®ÓE\x96¼m.\x95s\x0b<\x1e+\x06uTÄ¢l¿Ó±·\x1dëò¸ »Â¤3Îqcg¦+AJ¹xp³Y\x9c\x87ì\x81-\x8eÏk$U1\x8dÖC\x9d\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:04] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03(\x08³Î¼?\x123\x0eOQ9Ðz¾´ø¤[#\x03\x80xt\x1cò¦þ55g´ 8ßÚCG«ëg\x9eQç\x9e\x94Üµ \tú<\xad\x9cQª3*\x02\x9b/Ê\x96£!\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93zz\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:06] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¦ÊãK\x1cè\x9a·\x8b\x12õå·«\x04¢o{k\tçU\x1e/\x03d¼vê$ÉÒ -\x8b×Í¸&<L`\x7f|s\x84ÔÁà\x05\x11\x16NßBS®)á\x94w}\\\x91©\x00 ')
+[16/Apr/2023 11:43:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:06] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ùw%Ênóu\xa0\x10\x91R7öèL³\x12Cáâð5\x12\'\x84iØî\x0fö"c Âo&ã\x0bè®)p²\x01»¨3å¢2¦ë<¶')
+[16/Apr/2023 11:43:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:06] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03bÌþªV\r-\x8b\x8f\x81CQÙJÅÀ\x8b®¬Vð\x02k\x02,=\x9fÂ·\x0b\x7f\x9d \x8c\x102!$G«YÌ\rª§\x8bªïfÛrÿU\x91Ù\x0bÜ\x9cTá\\R9¤(\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:06] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x93P')
+[16/Apr/2023 11:43:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:06] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03j7ú')
+[16/Apr/2023 11:43:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:06] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x035nJ\x05ÃZrbÔ>\x92¤\x033\x11©\x97ÿÐÍk\x9e\xa07÷\x80\x82\x97T\x80=s ¸S5ªÝ§\x83)eô9\x95\x8cQY!÷)Wl®\x98Q\x87D.EÜ±Ný\xa0\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:07] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03R_\x11\x0f\x98Y*®\x83ÄV\x91F\x1c\x81ð}#ò}¹xsúÅ\x81Óêéõä× .\x02\x91\x04½£Åy(zUw\x83ß'\x10ÙDZ4P±ïãPóIÍ\x0c\x86gù\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93**\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:43:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:07] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x13(®\x85Z)ï2ç>\x01ãrÄÌÑWy\x85çý¶Ä\xa0¦\x91(W q<\x8b ÕÝ\x14õnz9\x8d\x02X\x88«Ð\x8d['\x94W2ïQµ©Lú±ËB\xa0³pF\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93")
+[16/Apr/2023 11:43:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:07] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03é\x9c»ò(')
+[16/Apr/2023 11:43:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:07] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x846\x95=ã£ã¦¿Zg½©²}\x9bÄåÊ')
+[16/Apr/2023 11:43:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:07] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ßüF\x18r@ò\x01Lº\x9b2\x8aà¢\x97\x17³%Ä½ó²d\x06U²*Çp\x18\x0e \r\x96\\´B\x87\x87`ïõCõ®\x9e¬\x9e\x03Ã+v¾OÛ`jl´\xa0Ê\x9fæ\x98\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:07] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03£}>t=Lu¯\x8eUÄ\x83)K{c\x1c\x04Ðî\x1a\xad\x9fÈ\x14R\x19\x19\\\x1f\x8f1 \x1eUÌa»\x8d\x0cÝ\x02q\x82Õ¹ïI\x9c6z¼äØ\x8aÆÕ`ÚàÐ\x83\x1ekC\x00 ºº\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:08] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 11:43:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03À"·½\x19{öÀý!¢*éôp¢±\x9eºè\\õd\x98üSÈâ\x84\x10¬¯\x00\x00BÀ\x11À\x07À\x13À')
+[16/Apr/2023 11:43:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:10] code 400, message Bad request version ('êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:10] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03DQ"|\x0eA\x92\x12÷\x9b\x07ðÊ^æ¢µPw3Ú¾jK\x8f!\x81r\x91¯\x90\x98 \x1f®ÄÊU\x9aL$kÑ µ@¡I\x0bG¾y£\x907Ð\x08Ù}Jj»p:è\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:10] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03X«IÛH°\x1a\x8b\r/\x886o}\x99F\x02p\x100\x1fí\x006§\x8cøó\x9bèò% V\x9cÝ/`\x80\x12¥A3lïÅ5è?át\x9a\x10\x8f\x13\x06\x06D6;·P+\x8bð\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:10] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03*jÎöÛ\x1a\xa0ùd\x1fc%ï\x88iá\x94ø\x11Úýó.³P@o\x08A¯9Y Ê|¡v\x89RQ\x89\x87»T\x8e\x136tòx\x80ïA«\x9cP@\x02K\x0f\x9b\x94ºZø\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x1a\x1a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03N/&\x17RÀG¡Ñ¶s_\tF\x04¢$R9.Ä\x13\x92\x17Y<°Ü¬\x95Í¿ ª\x08×æn\x80é\x17\x01ñÈÍ¥¤\t'YàWZ°L")
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad request version ('ð\x16?\x8e\x16\x81`2û')
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03«\x84«qìÓ')
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x14Q\x84û\x90?Y\x18þr`ôwúê\x86\x92haÓ =_zp¬sXA\'u¡ \x93"Ó4\x08\x90-\x80!;Q}\x06ÚHà\xad\x82\x0bÃk\x8a½Áµ¾Ë©n2¯Þ\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03W]õ4G5\x10üm\x1bF¶gZ\x88|\x00%¾\x16-¶8\x97ù\x84\x87H\x1fb\x1c\x86 w·²£\x88\x88\x99\x17N\x99ú¸Æ\x95|\x07üY\t\x02\x94øj²\x8eô\xa0¸Pã^\x8d\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93úú\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:24] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¼4Ór\x14\x96©\x8aØ\x98\x8f.â\x95\x16qýÜ&¯\x95P×5î\x90H\x03\x90:ù{ \x1a\x02¿ÞÅ®(á\x0bÒ\x8dgvIÁ\x1f¿«\x0eé©;\x18;H\x9fÙÞ8×ëy\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¨q¾À\x1aßÎ\x9f\x85Òï{<í\x0e'\x9c\x05ßÇ\x9bÕä{½77íò\x81ìx #ö7IÚ?cîf\x8b\x82T0\x15ÙJñ\x03\x94·-\x00P0òG{ZÂ<D®\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:24] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x80¸öv¼Ï\xa0\x85\'"\x0f±)ï\x86?\x00Ðã\x82\x9e\x85ËE¿\x88f\xa0È\x1dRí çaÈ`¥±Há5?²w\x1fö©\x15ÖÉ\x1fBÖ;ÑZ.\x8büZ\x06´9\x9a\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:27] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03DåYdô²´h÷Þ\r1&\x7f\x82õÿV\x97\xa0â\x1eÛ\x86\x83\x04\x16d1Z"È Q\x87¥')
+[16/Apr/2023 11:43:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:27] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x17\x01£H¼s\x18Ø"¯\\6©ÁÏÞ¯ü\x9f¯c,kî,\x94¥þ\x1b;\x9d\xad')
+[16/Apr/2023 11:43:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:27] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:27] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ð\x86\x97\x10T\x82ï~Ý^s\x05©\x12\x1eY\x15ZìrI\x0c\x0b\x8eæøWHÄ4\xadw ½r¦wãÀ\x97º\x99Wùv\x81IcÍ\x83X\x9c\x13«kßQo+\x14\x08\x8e\x89Ìi\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:55] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ß\x01Ye\x92'7ùbÊñµ\t\x01GöUÒ¬HÐ-\xad½ÂbJÁs`\x12\x86 \x92ÊH\x13Ê\x9e\x9côÓ´òlCÖ¬Íö¾wÚÍ\x1aæ\x07eAwÉÂ(§¸\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:43:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:55] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x01r\x954'Èq\x0bÕ¿³\x87´î\x87²\x89\x13\x1eÒ\x92¾ò\x1d-HâA²S÷\x8e \x85Xd½a^p\x14\x1c\x1emå\x9a#Ï\x89\x16oä\x1f®\x19£tqf\x8e°Ð\x91e¦\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:43:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:55] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9cÙÝ;\x95\x9fþ$`©p0YÌ³âÙ× X\\\x9c\x1cØsÑ7/\x81*\x97ÿ \x1að`KÓ´0\x03p\x1e.º\x10«7.ÛâÆ\x0eZúÐÆ\x96é':¹º\x12ù\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:43:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:55] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03-\\%Bd\x9a¥³\x88\x912º\x03¡,£ù\x82®Þ°ÉÄT\x07¨H¿ÅsS\t T8\rú\x02Ûïh\x1f[\x95\x1bqèZ#ÕéQm3\x9fü»!\x1d\x14\x98\x0f\x87&¨\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ºº\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:55] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x1a+:\xa0\x90ä÷T\ro:;¾=ö¡Ïî?Ç8\x90¤Võ\x17\x97½ÜäÁ\x90 \x84\x00©Ä\x0e\x05{é\x95\x8d[¦\x06!N\x10\x80FöaÍîNKê\x85Ò \x9d\x8b:\x19\x00 ')
+[16/Apr/2023 11:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03b\r$YÀ\xadÄö\x18A\x83´\xa0E-\x13´\x9a|¬\x88Åw²59Bx8¹ZM á\x84NÞr¼LÙÇ\x8f\x90V#¡Ê\x81¹\x9c;¡¯qÉ\x83ß\x8eÎ¼üY±\xad\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:56] code 400, message Bad request version ('\x83Ôýn>°qUÅ.¢E')
+[16/Apr/2023 11:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ÊaÙr\x07Ê}$\x8fTþ\x84{¿H£ð')
+[16/Apr/2023 11:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:02] code 400, message Bad request version ('wùÌè\x08e`dÀ-¹')
+[16/Apr/2023 11:44:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:02] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ïë|I·rÒJ85I\x08Ã¾\x9aäª\x071îOÍB]Eé%ó\x18ªdþ  e©\x00m\x025~æE\x01h\xa0\x9fî\x8b\x08\x99\x8bü¶8'Â>XMd]'Vj\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 11:44:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:02] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x16$ï\x88qø÷G\x80\x0c\x89o½ç|\x8b\x80m"\x91\xa0%GSêÙÈ?\x99ì×7 \x83·Á{Õ×R\x02@\x13\x97W\x00¡»wÄ´Ûp\x14\x80oùÂpY\\É\x9cëû\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93úú\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:44:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:02] code 400, message Bad request version ('**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 11:44:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:22] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03$6\x87\xa0Y¿ò\x87ûrz\x0b*»r§2¼K\x81â8vò\x16·é\x171o?_ \x19\x07L§Ä·L¨\x88c\x80ì³\x8d-x+£²ÅRV\x0f\x06\x84¬\xa0o\x10\x12}b\x00"úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+[16/Apr/2023 11:44:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:22] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x81Ô\x1c£\tK½D\x1f\x18mTÃK/Ú\x800q\r%\x92\x98Q´ó\x18©ù\x96ýY F´\x0eiç\x81\x87ÛæJ[Îº;\x07=²Ühÿs\\\x83\x8f\x19\x02\x15>\x01È\x19\x92\x00"úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+[16/Apr/2023 11:44:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:23] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03b¸&ô\'\x1d±ÙÝÖí\x93©\tV\x145X\t\x06\x1dF\'G\t\x19y\x06¤Ã*¼ ,¬_\x9a\x83ã\x8a~È8÷ÀÚ\x01Þ5ê1\x01n£\x1b#\x03Ö\x1c5BØÖHñ\x00"zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+[16/Apr/2023 11:44:23] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ò¾¿Oñ\x0fÌdÍ]\x11á`\x99\x87ÓE²yþÎj\x9a!5ºÆS\x81s\x08ó çd\x81®-q:RM\x03\x1c\x83\x88IçÐ\x13Ñ®\x01²º\xa0hE½ûFï\rËÞ\x00"ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+[16/Apr/2023 11:44:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:23] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:28] code 400, message Bad request version ('d4\x8cÄ7¬\x83')
+[16/Apr/2023 11:44:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:28] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ó\x0fð\x01#\x05\x9bC\x18\x01Y\x16·¯\x02pd\x1d\x1fÎ4.\x99\x16\x9aK\x08þ&voJ ²5\x90´eî\x7f,§\x87\x1f×ÝQ\x8b¼Ðd\x81\x9fä\x91?\x11Ë$¿åß«{\x02\x00"**\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+[16/Apr/2023 11:44:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:44:41] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:44:42] "GET /static/css/style.css HTTP/1.1" 200 17399
+[16/Apr/2023 11:44:42] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[16/Apr/2023 11:44:42] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:44:42] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[16/Apr/2023 11:44:42] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[16/Apr/2023 11:44:42] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[16/Apr/2023 11:44:42] "GET /static/images/square.png HTTP/1.1" 200 406
+[16/Apr/2023 11:44:42] "GET /static/js/custom.js HTTP/1.1" 200 408
+[16/Apr/2023 11:44:45] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 11:44:47] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[16/Apr/2023 11:44:48] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 11:44:50] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 11:44:51] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:44:53] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 11:44:55] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[16/Apr/2023 11:44:56] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 11:44:56] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[16/Apr/2023 11:44:56] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:44:56] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:44:56] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:44:57] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:44:57] "GET /static/images/location.png HTTP/1.1" 200 456
+[16/Apr/2023 11:44:57] "GET /static/images/phone.png HTTP/1.1" 200 385
+[16/Apr/2023 11:44:57] "GET /static/images/mail.png HTTP/1.1" 200 358
+[16/Apr/2023 11:44:57] "GET /static/images/prev-white.png HTTP/1.1" 200 227
+[16/Apr/2023 11:44:57] "GET /static/images/next-white.png HTTP/1.1" 200 231
+[16/Apr/2023 11:44:58] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 11:45:00] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+Not Found: /favicon.ico
+[16/Apr/2023 11:45:10] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:46:08] "GET /contact/ HTTP/1.1" 200 6506
+[16/Apr/2023 11:46:09] "GET /contact/ HTTP/1.1" 200 6506
+[16/Apr/2023 11:46:19] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:46:19] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:46:19] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:46:19] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:46:19] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:46:19] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:47:00] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:47:00] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:00] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:01] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:01] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:01] "GET / HTTP/1.1" 200 22956
+[16/Apr/2023 11:47:09] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:47:10] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:10] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:10] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:10] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:10] "GET /static/images/client.jpg HTTP/1.1" 200 18945
+[16/Apr/2023 11:47:10] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:47:15] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:47:15] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:15] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:15] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:15] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:15] "GET /static/images/client.jpg HTTP/1.1" 200 18945
+[16/Apr/2023 11:47:15] "GET / HTTP/1.1" 200 23091
+Not Found: /favicon.ico
+[16/Apr/2023 11:47:19] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:47:33] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:47:33] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:33] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:33] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:33] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:47:33] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:48:05] "GET /about/ HTTP/1.1" 200 5588
+[16/Apr/2023 11:48:05] "GET /about/ HTTP/1.1" 200 5588
+[16/Apr/2023 11:48:07] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:48:07] "GET /company/ HTTP/1.1" 200 7950
+[16/Apr/2023 11:49:06] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:49:06] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 11:49:06] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:49:06] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:49:06] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:49:06] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:49:09] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:50:41] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:50:42] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 11:50:42] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:50:42] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:50:42] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:50:42] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:50:42] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:51:02] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:51:02] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 11:51:02] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:02] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:02] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:02] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:02] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:51:06] code 400, message Bad HTTP/0.9 request type ('l\x8d?')
+[16/Apr/2023 11:51:06] "l?n!k" 400 -
+[16/Apr/2023 11:51:07] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 11:51:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03õ(ö/%"\x9fì(\x03k¹r\x18ôkÍÇÞ»Å\x9d4£Õ3jëA\x16ª!\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[16/Apr/2023 11:51:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:08] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03µÝ»ÁÎ7ò?ÝeW\x9bÀ6\x99Äÿ\xadI\x1aXÎHºå\x93\x9b/\x93"\r§ ÄUÖÚEú\x82Î\x85òÏ\x95\x1fu¢Õ¢>È»µ\x11}¶ÄOðÖÐÃm!\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[16/Apr/2023 11:51:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:09] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03o®K\x1a\x17Ô<')
+[16/Apr/2023 11:51:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:09] code 400, message Bad request syntax ('\x16\x03\x03\x01W\x01\x00\x01S\x03\x03VÍ\x17\x9bY\x80õê*Ä\x0e¥oGx\x1d¹)ò\x03k\x00F6"z\x8eµêü{U ÊXÙÚV\x99«&93ÂÝNr\x15àvÅc^¯\x95\x8aß[æÃö\x0b±&;\x00FÀ\x12À\x07Ì\x14\x13\x01\x13\x02Ì©ÀsÀrÀ,À¯À\xadÀ$À')
+[16/Apr/2023 11:51:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:10] code 400, message Bad request syntax ('\x16\x03\x03\x01I\x01\x00\x01E\x03\x03 ½\x804½\x9cø\x96ç\x1cë\x12\x16[ÀE\x87³/\x1e]4@¾"=J\x8f¥\x01Æù `[È\x9bT¼&ÖÒdÀ\x904\x85§[sI\x8déÁÃv\x13\x00\x8cô\x0cüÊZ¬\x00DÀ\x13À\'À/À\x14À(À0À`ÀaÀvÀwÌ¨\x13\x05\x13\x04\x13\x03Ì\x13À\x11\x00')
+[16/Apr/2023 11:51:10] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:12] code 400, message Bad request syntax ("\x16\x03\x03\x01\x9a\x01\x00\x01\x96\x03\x03ù8éÓ\x9cÏäjØÒ\x88b¸\x1eý\x16\x0e\xad\t¥Òôºi@{\xa06d¾\t\t \tº\x12<\x89FAñà\x9fQ\x95IO«røT\x9a\x11A;v(\x9aí%\x11©&OÆ\x00\x8cZZÀ\x12À\x13À\x07À'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À")
+[16/Apr/2023 11:51:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:12] code 400, message Bad request syntax ("\x16\x03\x02\x01\x9b\x01\x00\x01\x97\x03\x02¥\xadsmu÷ÇÓmNoº¯æü\x03\x04\x90}1\r\x03l'\x85\x85\x83Bµ\x92Ö< ª>9RºN`k%8=4\x9e°\x1f\x07À\x9bN#V\x1f\x98\x83z\x06&ÇßW>q\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À")
+[16/Apr/2023 11:51:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:13] code 400, message Bad request syntax ('\x16\x03\x01\x01¨\x01\x00\x01¤\x03\x03_\x81}êL\x10ÿe\x1aÚHß]ë+rø§±\x15sàoY\x08}Kv\x95\x8a%r Æ÷ý\x81(Â¿p@\x1c\x1bØt\x86éeIÝ\x8c¸cYuë\x061¦FÐO¥µ\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[16/Apr/2023 11:51:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:14] code 400, message Bad request syntax ('\x16\x03\x01\x01¨\x01\x00\x01¤\x03\x03\rÅy;uÔ\x84þ9\x0cB\x7f\xa0¨Á@æ\x1f2¹èøÎË¬KrÕæë:2 \x1aj¦èyÞ\x84v÷X\x11³\x81ÐHcm\x15ÈJî{\r\xa0oO\x1b×m\x0b\x1a3\x00\x8a\x00\x05\x00\x04\x00\x07\x00À\x00\x84\x00º\x00A\x00\x9dÀ¡À\x9d\x00=\x005\x00\x9cÀ\xa0À\x9c\x00<\x00/\x00')
+[16/Apr/2023 11:51:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:15] code 400, message Bad request syntax ("\x16\x03\x01\x01\x9e\x01\x00\x01\x9a\x03\x03¶õ\x92÷ú,ÜÆ1±\x9aéP\x99hÇ£\x05ùõ}ãèzS;2A\x18U3E ['0Ý$\x00}NÂ\x0eáðÎ[\x8a÷ÃR¿\x11\r\x02Õt+8Z¹ü\x8eëó\x00\x80\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À")
+[16/Apr/2023 11:51:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:16] code 400, message Bad request syntax ("\x16\x03\x01\x01µ\x01\x00\x01±\x03\x03È\x9a6îy·å¼\x00ï\x8f\x1c\x14\x81MÅmU\x17Ä?_÷ \x10Ú¡Ø÷ÅH\x87 \x93\x0cä+µËÞ¯ ú¯\x1fÖ@q\x0f\x92<v\x8c\x7f\x1eä\x124¼^É\t\x8f\x1c\x8e\x00\x8cÚÚÀ\x12À\x13À\x07À'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À")
+[16/Apr/2023 11:51:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:16] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 11:51:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:17] "GET / HTTP/1.1" 200 23091
+Not Found: /private/api/v1/service/premaster
+[16/Apr/2023 11:51:18] "GET /private/api/v1/service/premaster HTTP/1.1" 404 2778
+[16/Apr/2023 11:51:19] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 11:51:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:19] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03éaÓ@ÏÀ|e«')
+[16/Apr/2023 11:51:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:20] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03D\x12-\x13ÞÖÌ\x0c×\x1d\x17\x1b\x18\x83\x96sÒÖt\x85X£bÕÚH\x07\x9b{\x15\x18*\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 11:51:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 11:51:41] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:51:41] "GET /static/images/logo.png HTTP/1.1" 304 0
+[16/Apr/2023 11:51:41] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:41] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:41] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:41] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:51:42] "GET / HTTP/1.1" 200 23091
+Not Found: /favicon.ico
+[16/Apr/2023 11:51:45] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 11:52:35] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:52:36] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:36] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:36] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:36] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:52:36] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:42] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:52:42] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[16/Apr/2023 11:52:42] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[16/Apr/2023 11:52:42] "GET /static/css/style.css HTTP/1.1" 200 17399
+[16/Apr/2023 11:52:42] "GET /static/js/custom.js HTTP/1.1" 200 408
+[16/Apr/2023 11:52:42] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[16/Apr/2023 11:52:43] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[16/Apr/2023 11:52:44] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[16/Apr/2023 11:52:44] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 11:52:44] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:52:44] "GET /static/images/client.jpg HTTP/1.1" 200 18945
+[16/Apr/2023 11:52:45] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[16/Apr/2023 11:52:46] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[16/Apr/2023 11:52:47] "GET /static/images/square.png HTTP/1.1" 200 406
+[16/Apr/2023 11:52:49] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 11:52:50] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 11:52:53] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:52:55] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:55] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:55] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:55] "GET / HTTP/1.1" 200 23091
+[16/Apr/2023 11:52:55] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:52:59] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 11:52:59] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 11:53:00] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 11:53:01] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:01] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:01] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:01] "GET /static/images/location.png HTTP/1.1" 200 456
+[16/Apr/2023 11:53:01] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:01] "GET /static/images/mail.png HTTP/1.1" 200 358
+[16/Apr/2023 11:53:01] "GET /static/images/phone.png HTTP/1.1" 200 385
+[16/Apr/2023 11:53:01] "GET /static/images/prev-white.png HTTP/1.1" 200 227
+[16/Apr/2023 11:53:01] "GET /static/images/next-white.png HTTP/1.1" 200 231
+[16/Apr/2023 11:53:02] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 11:53:08] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[16/Apr/2023 11:53:31] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:53:33] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:33] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:33] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:33] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 11:53:33] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:53:39] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:53:50,101] - Broken pipe from ('223.104.102.205', 22112)
+
+[16/Apr/2023 11:53:50,130] - Broken pipe from ('223.104.102.205', 20553)
+
+/root/pro/teaser/teaser/settings.py changed, reloading.
+Performing system checks...
+
+System check identified no issues (0 silenced).
+April 16, 2023 - 11:32:29
+Django version 3.2.18, using settings 'teaser.settings'
+Starting development server at http://0.0.0.0:443/
+Quit the server with CONTROL-C.
+[16/Apr/2023 11:54:43] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:54:43] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:43] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:43] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:43] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:43] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:54:46] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:54:46] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:46] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:46] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:54:46] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:54:46] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:55:14] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 11:55:15] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 11:56:03] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:56:03] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:03] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:03] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:56:03] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:03] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:50] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:56:50] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:50] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:50] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:50] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 11:56:50] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 11:59:01,989] - Broken pipe from ('223.104.102.205', 39501)
+
+[16/Apr/2023 11:59:01,990] - Broken pipe from ('223.104.102.205', 39510)
+
+[16/Apr/2023 11:59:01,999] - Broken pipe from ('223.104.102.205', 38405)
+
+[16/Apr/2023 11:59:02,000] - Broken pipe from ('223.104.102.205', 38404)
+
+[16/Apr/2023 11:59:02,001] - Broken pipe from ('223.104.102.205', 39500)
+
+[16/Apr/2023 12:04:24] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:04:24] "GET /static/css/bootstrap.css HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/css/style.css HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/css/responsive.css HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/square.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/about-img.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/s-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/s-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/s-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/s-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/s-5.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:24] "GET /static/images/s-6.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/location.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/mail.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/phone.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:25] "GET /static/images/client.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:26] "GET /favicon.ico HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:04:53] "GET /static/css/bootstrap.css HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/css/style.css HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/css/responsive.css HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/square.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/about-img.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/s-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/s-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/s-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/s-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/s-5.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/s-6.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/client.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/location.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/phone.png HTTP/1.1" 404 179
+[16/Apr/2023 12:04:53] "GET /static/images/mail.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:10,942] - Broken pipe from ('106.118.103.146', 43760)
+
+[16/Apr/2023 12:05:10,943] - Broken pipe from ('106.118.103.146', 43758)
+
+[16/Apr/2023 12:05:10,943] - Broken pipe from ('106.118.103.146', 43757)
+
+[16/Apr/2023 12:05:10,944] - Broken pipe from ('106.118.103.146', 43759)
+
+[16/Apr/2023 12:05:10,945] - Broken pipe from ('106.118.103.146', 43762)
+
+[16/Apr/2023 12:05:10,945] - Broken pipe from ('106.118.103.146', 43763)
+
+[16/Apr/2023 12:05:35] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:05:35] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/css/bootstrap.css HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/css/style.css HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/css/responsive.css HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/square.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/about-img.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/s-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/s-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/s-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/s-6.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/s-5.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/client.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/location.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:35] "GET /static/images/phone.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:36] "GET /static/images/mail.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:36] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:37] "GET /static/images/s-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:05:40] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon-120x120.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /favicon.ico HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon-120x120-precomposed.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon-120x120.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon-precomposed.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /apple-touch-icon.png HTTP/1.1" 404 179
+[16/Apr/2023 12:05:41] "GET /favicon.ico HTTP/1.1" 404 179
+[16/Apr/2023 12:05:50,756] - Broken pipe from ('106.118.103.146', 44370)
+
+[16/Apr/2023 12:06:28] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:06:51] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:06:51] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:06:51] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:06:51] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:06:51] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:06:51] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:06:51] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:06:52] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:06:52] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:06:52] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:06:54] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 404 179
+[16/Apr/2023 12:06:54] "GET /favicon.ico HTTP/1.1" 404 179
+[16/Apr/2023 12:06:54] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 12:06:54] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:09:23] "GET /static/css/bootstrap.css HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/css/style.css HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/css/responsive.css HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/s-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/about-img.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/square.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/s-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/s-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/s-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/s-5.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/s-6.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/js/bootstrap.js HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:23] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/js/custom.js HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/client.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/phone.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/location.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/mail.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/about-img.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/s-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:09:24] "GET /static/images/square.png HTTP/1.1" 404 179
+[16/Apr/2023 12:09:26] "GET /favicon.ico HTTP/1.1" 404 179
+[16/Apr/2023 12:12:32,740] - Broken pipe from ('223.104.102.205', 50723)
+
+[16/Apr/2023 12:12:32,740] - Broken pipe from ('223.104.102.205', 50692)
+
+[16/Apr/2023 12:12:32,741] - Broken pipe from ('223.104.102.205', 50711)
+
+[16/Apr/2023 12:12:32,741] - Broken pipe from ('223.104.102.205', 64160)
+
+[16/Apr/2023 12:12:32,741] - Broken pipe from ('223.104.102.205', 50710)
+
+[16/Apr/2023 12:12:32,742] - Broken pipe from ('223.104.102.205', 64136)
+
+[16/Apr/2023 12:12:32,742] - Broken pipe from ('223.104.102.205', 50691)
+
+[16/Apr/2023 12:12:32,742] - Broken pipe from ('223.104.102.205', 50376)
+
+[16/Apr/2023 12:13:52] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x01\x96\x01\x00\x01\x92\x03\x03\x97lgjgñ\x99\x9dw¹º¼1')
+[16/Apr/2023 12:13:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 12:21:39] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:21:39] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:21:39] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:21:39] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:22:47] code 400, message Bad request syntax ('\x16\x03\x00\x00S\x01\x00\x00O\x03\x00?G×÷º,îê²`~ó\x00ý\x82{¹Õ\x96Èw\x9bæÄÛ<=Ûoï\x10n\x00\x00(\x00\x16\x00\x13\x00')
+[16/Apr/2023 12:22:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 12:23:07] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:23:07] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:23:07] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:23:10] "GET /favicon.ico HTTP/1.1" 404 179
+[16/Apr/2023 12:25:09,440] - Broken pipe from ('223.104.102.205', 13880)
+
+[16/Apr/2023 12:25:09,449] - Broken pipe from ('223.104.102.205', 13869)
+
+[16/Apr/2023 12:25:09,449] - Broken pipe from ('223.104.102.205', 14089)
+
+[16/Apr/2023 12:25:09,450] - Broken pipe from ('223.104.102.205', 13977)
+
+[16/Apr/2023 12:25:09,450] - Broken pipe from ('223.104.102.205', 13976)
+
+[16/Apr/2023 12:25:09,451] - Broken pipe from ('223.104.102.205', 13602)
+
+[16/Apr/2023 12:27:12] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:27:12] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/s-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/s-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/s-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:27:12] "GET /static/images/s-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/s-5.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/s-6.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:27:12] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:29:12] "GET / HTTP/1.1" 400 143
+[16/Apr/2023 12:29:13,095] - Broken pipe from ('223.104.102.205', 44855)
+
+[16/Apr/2023 12:31:14] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00ü\x01\x00\x00ø\x03\x03]ã5DAÈm±ó·²q\x8dÎsd7Fz\x92ùì'ýe\x84&rãÈÇ1\x00\x00\x8cÀ0À,À2À.À/À+À1À-\x00¥\x00£\x00¡\x00\x9f\x00¤\x00¢\x00")
+[16/Apr/2023 12:31:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 12:35:19] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 12:35:20] "GET /static/images/logo.png HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/logo1.png HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/d-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/d-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/u-1.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/u-2.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/u-4.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:35:20] "GET /static/images/u-3.jpg HTTP/1.1" 404 179
+[16/Apr/2023 12:35:21] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 13:01:08] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[16/Apr/2023 13:01:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 13:07:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00')
+[16/Apr/2023 13:07:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Watching for file changes with StatReloader
+[16/Apr/2023 15:43:03] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:04] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:04] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:04] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:04] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:04] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:05] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:05] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:05] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:05] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:05] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:06] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:24] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:24] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[16/Apr/2023 15:43:24] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[16/Apr/2023 15:43:24] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[16/Apr/2023 15:43:25] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[16/Apr/2023 15:43:26] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[16/Apr/2023 15:43:33] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 15:43:33] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 15:43:36] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 15:43:36] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:37] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 15:43:38] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 15:43:39] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[16/Apr/2023 15:43:40] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[16/Apr/2023 15:43:40] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:40] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 15:43:40] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[16/Apr/2023 15:43:41] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:41] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:41] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+Not Found: /favicon.ico
+[16/Apr/2023 15:43:45] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 15:43:54] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:54] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET /static/images/s-1.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET /static/images/s-3.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET /static/images/about-img.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET /static/images/s-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET /static/images/s-4.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:54] "GET /static/images/s-5.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET /static/images/s-6.jpg HTTP/1.1" 304 0
+[16/Apr/2023 15:43:54] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03)\x8cõ]ìÕ/u!o\x1fÊ\x1d ÙW@CÌ)\x9fØL\xadû\x13.\x13C+c8 õ"w\x8d\x15ß\x17ý\x15UbÄïªÑ³ý\x03\x84Bj\\\x92?À²\x1dÓä{sÝ\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93')
+[16/Apr/2023 15:43:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:54] code 400, message Bad request version ('ÊÊ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03M\x87\x12Å\x84\x11º\x97¿@\x9d\x01þ\x19´ùí\x03º¼tRâr³\x96\xad¬â.¯7 \x84\x0b\x99Ç\xad\x9b¶â÷·\x8eWÚ×\x0bª¯Ëç;\x94÷\x86\x10²½w~TpÅV\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:54] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:54] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:54] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03CÀ\x9b¯\x00¤·KvZ\x97+\x8a%.9Y\x00´GèÃ0n\x9cé?QS\x12@ö À«Ù[vÊ\x90²C*\x88X\x01o\x1dyß~£0\x11R\x05\x85ÿ\x1aÎ\x83È§ôå\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ZZ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x05þ\rÓ-\x93i\x8d\x0fI\x06ê\x80é1Â{,ÑÄb«ÇkîhÐ\x10ÓV£V 1¦·ÉzI%\x04Í\x9f#º*0V\x1f÷\x8ecU·\x94\x87æ»0K\x13\x08\xa0T\xad\x00 ')
+[16/Apr/2023 15:43:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x17±òä\x97ÏÖÏL\x98^eý\x7f£ \x8b4ì·\x08llù\x1eº(\x05\x8brÃ¾ d\x0eè\x93f\x13\x96¾\x9c\tY\x16Ý^\x0c>ûh(£\x83@ñwÇþ3\r\x11\x16MÄ\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93::\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:54] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:55] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 15:43:56] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:56] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:56] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:56] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:56] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:56] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x86MCþ\x9c\x04\x0f\x95\x9e§èª\x7f,\x83z-Ê\x17|©ôå°\x1c\x13\x80O\x7fK\x99H ×\x1béoóùE_\x88\x0eaÈJQ¦\xa0\x83\x03ý²¬\r\x02\x9d¨=\x1eD¡Ñ\x81,\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x80Wdjß\x1fº\x05\x88·¡³\x03A\xad0e=¶Ì\x06\x88\x8f\x06Í\x85·\x0b\x8b\x9fÅN ó(\x0b\x87\txmÇ´÷öý¢¯1\x0f\x17à,\x828û#!\x9d\r\x08\x06C¡Óð\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÚÚ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03&8ÀÎ Êm¤\x9b\x1c0Õ#×\x0fk\x1bòÍ\x96^ ÄX¸c\x076\x86k¾É >|ä3éîÇÀ³|ì³1±ì\xa0a\x92ë6\x88\x1b\x90³§[ëIó\x06Kþ\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ºº\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:56] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9dg£ø²¹q\x08¸a¹\x19X<cê(|û\x13\x89~¸Ç\tæ\x8eÙòEDà ¸'ÊìòNöºF!ÁïCb\x92¨\x11F\x1aV½»AÜ¨ù\x86ã\x0f+ìK\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 15:43:56] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03H\x8b[¢{á6\x10Kêq\x9d\x88')
+[16/Apr/2023 15:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:56] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x9f±'{j¸Ü")
+[16/Apr/2023 15:43:56] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:58] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:58] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:58] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:58] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:58] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:43:58] "GET / HTTP/1.1" 200 23105
+[16/Apr/2023 15:43:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Iäÿdó\x0c"\x1f"fú.Ð6{)MzT¡ä\x8d\x96\x1ev¶þO-[\x16N \x94\x93\x93Åc\x04Ç\x81øö~\x1e\x95ª¦^¾#ªîyÝÌ\x94Y\x1e0\x8a\x1bR\x0eÞ\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:58] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03')
+[16/Apr/2023 15:43:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03/\x86~¯\x07)1âÄÕê\x15×m©m\x85ß¦\x17ô¶¥òW\x0eØ¤ííÝE * 9W\x17Ö\x0clÕ\x07¸\x9b\x16eñßû²\x95\x9c¤@jéÜbØ\x81ébAT\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93jj\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:58] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x1b\x11\x06Dèý{9Ï(#\x85¾Ê\x95¬<\x14ï£'Ù6ý\x06\tt(\x82ç|E É¦\x07B\x14\x97ckÝ\x8e#»qÜ']\rù¡°cð\x83÷$æHràÆ}.\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ZZ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 15:43:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ó4IÖ=ÄC\x9e')
+[16/Apr/2023 15:43:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:43:58] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03*çð\x19%\x13µ(å\x8dîªae\x03\x8bíÒúI.d\x861\t³Õa¨?\x82f \xad=®[#g\x9a·=\x8dr½wó\x9d¯²ühÁwe~¿\xa0\x1b«F\x8d\x82\x1d¬\x00 \x1a\x1a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:43:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Not Found: /favicon.ico
+[16/Apr/2023 15:44:00] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 15:44:48] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 15:44:48] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:48] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:48] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:48] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:48] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 15:44:48] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x0e ë'3¦æí\x02:\x1f ùÄfrÌâeR\x05YÙÄ.âË\x81ú\x84=\xad WÃ¦à\x07ùÝþM£³$âõk?Is=RÑ5èªþüf\x1ch®\x0cû\x00 JJ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93\x8a\x8a\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 15:44:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:48] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03ï\x95WP¤·,l®{\x03æVqâxùå:iAû´£\x02\x9c©\x134euh M:=È\x92äü¯Þ\x07¶Ö,>UÓÁ\t\x7f^@û\x7f\x8b\x14\x07[G\x01&\\x\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:44:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:48] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\xa0êä,Ü\x91÷C\x14ßç³=DÎã\x82U\x07E\x00\x9am¨L\x8c\x86(ÖG\x8aé H1TÚøO\x00HÛÅ7Ð.x÷Ü\x80\\£'\x15±C\x99Ð/[êHdÉ¾\x00 êê\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 15:44:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:49] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x87ö\x05ËÕj\x08+%\xad\x1dO\x06YGN\x1f\x7f\x10\x84\x11\x01aZè\x02¢\x14'ØeÑ äætv&\x04Vü\xad\x04ù\x9d'Ú±µ¹\x1e[\x88\x86oü\tñ¼4¸?6ß\x82\x00 zz\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 15:44:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:49] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x0ejá¾÷>ªU\x1dÃà\x13Ie½É?õI$Î\r=¬ª£U\x8b\x96\x00\x91õ aÿí')
+[16/Apr/2023 15:44:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:49] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03Ã/6ÛWzAµ¹Qì¤ù')
+[16/Apr/2023 15:44:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:51] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 15:44:51] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:52] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:52] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:52] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:52] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 15:44:52] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03µµ?ÜÙÁÅ\xa0.ÈDÎ\x1d/\x9c"@2G\x91-ä\x1f/WæX\x99\x93ú\x0cÑ aì\x96\x06ÇÿltIS&\x13ð\x82®Ôo¡iþöü0j;øü5×=|Ô\x00 \x9a\x9a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ªª\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:52] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x12!þÂ[ï®Jî¦\x04ñR35ò6ý\x93ìÿ\x1få\x01£®íí¼ç\x02/ úP\x7f \x88f[¹¨2Bì]¡\x91j½úÏ3ïB')
+[16/Apr/2023 15:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:52] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03rj\x05a`8énO+òògúsq*\x8aÌêïy¾3ÞÆÍy\x08¦\x86á fOÕ\x07¥)\x1e'´pf\x16Ìc^Æá\x07¬° Ù\x93ÿÒÏå\x92UÖpõ\x00 \x8a\x8a\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ÊÊ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00")
+[16/Apr/2023 15:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:52] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x8f]B\x1aÝ\x8fd\x0f {7¢Z4\x908ÀSpvXÙ!\x97ª\x0eÞ/Q·ºÚ \x8bµP\x1b¡\x90\x87l{\x8a@ß$$¢\x9cùÂmxH\x1a\x0cV\x8e]')
+[16/Apr/2023 15:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:52] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x85h\x06\x002$s±µ\x15ó\x97Y³¬{Dñ\x02\x85Ý¯&x{\x8e:®\x94\x12³\x85 Íì\x0b\xa0âVÙ&2Å²\x9e\x83³Sóé:\\hÆs\x80\x1b-E![|\x1f\x8að\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93ZZ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:52] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03dÆ©á(¼L\x95h©\x0b9l\x03zº®ÈÂÆÒHb¯V3rùgË+µ Ó\x08±8±p¬ú\x11?\x8a\tÝ}ÿt3\x10\x19v\x0bØ\x0b0Áê3ÄÐ¸Ùü\x00 ÚÚ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93JJ\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:44:52] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:53] "GET / HTTP/1.1" 200 23106
+Not Found: /favicon.ico
+[16/Apr/2023 15:44:53] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 15:44:53] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:53] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:53] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:53] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:44:53] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 15:44:53] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x85\x94ÒÒVþ\x8eôì\xad\x13xÔ;·ñÇ\x99\xadôÀ\x11wÍÙ\xad¸\x0e5©Ð\x83 /K¾Ï\x90ì\x15ì<\x98àiÉO2\x7f\x86,\x10\x89££ÓÐ`\x95ªJVÊ¢k\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93')
+[16/Apr/2023 15:44:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:53] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¡\x95z\x11¬#E¼ÒÑ\x81b»§Q\x9e5ø±\x0b\x9a\x9bS¶év~G\x0c³Xã f÷ù\t\x84}Ò(\x86e')
+[16/Apr/2023 15:44:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:53] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03')
+[16/Apr/2023 15:44:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:54] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x038\x074é4³ü¸·Ýkb')
+[16/Apr/2023 15:44:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03øVO\x0f\x92MaÈræóù#ÁG\x99\x07ÈL\x8eã\x8bT\x83}ï¤z3\xad\x85Ú SnÓã\x82\x8elß\x9a\x1c4£\x01þ\tÞ=²ÜwÑ')
+[16/Apr/2023 15:44:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 15:44:54] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03dn\x19\x80¬/\x1e¥k`G\x87y¯c\xad\x80#¡tºêù®Ì©\x9a~nwB§ NdÓv\x9céÅ\x0bÙÿYÂ\x9c¤öIµ¾þ\x08D_t\x8e*µ\x8bG·å\x17±\x00 jj\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x01\x93êê\x00\x00\x00\x17\x00\x00ÿ\x01\x00\x01\x00\x00')
+[16/Apr/2023 15:44:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Not Found: /favicon.ico
+[16/Apr/2023 15:44:55] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 15:45:37] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 15:45:37] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:45:37] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:45:37] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:45:38] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 15:45:38] "GET / HTTP/1.1" 200 23106
+Not Found: /favicon.ico
+[16/Apr/2023 15:45:41] "GET /favicon.ico HTTP/1.1" 404 2715
+[16/Apr/2023 16:26:26] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 16:26:26] "GET /static/images/logo.png HTTP/1.1" 304 0
+[16/Apr/2023 16:26:26] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 16:26:26] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 16:26:29] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[16/Apr/2023 16:26:29] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[16/Apr/2023 16:26:30] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[16/Apr/2023 16:26:32] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[16/Apr/2023 16:26:36] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 16:26:36] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[16/Apr/2023 16:26:37] "GET /static/images/d-1.jpg HTTP/1.1" 304 0
+[16/Apr/2023 16:26:38] "GET /static/images/d-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 16:26:38] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 16:26:38] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 16:26:38] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 16:26:38] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 16:26:39] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[16/Apr/2023 16:27:40] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03E¿!\x8a\x009\x8b\x9c\x13f\x1dS\x06&\x04\\´î\x1eû\x12y$¹\x03\r\x1c¡ÚZ\x86¶\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 16:27:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 16:31:30] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03ßÀÒ9´q\x8e»æ«e}¿\\\x85oi[\x0c\x9b}c2\x0eOBôµ0\x14Tã\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 16:31:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 16:49:47] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03Rw\x8bqµé\x9e\x89ß\t\x1a\x84(ü\x01n·R\x87V±\x8f¯`\x1b/Ö«ÔÔh\x02\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[16/Apr/2023 16:49:47] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 18:19:49] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 18:19:51] code 400, message Bad request syntax ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03rØ}5£C\x08¼\x99\x9b')
+[16/Apr/2023 18:19:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 18:19:51] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 18:22:52,120] - Broken pipe from ('121.62.19.203', 41296)
+
+[16/Apr/2023 18:46:24] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03#î\x13\x19SÚs\x8e\x12ç-{vÈ\x93ÏÒûËÂëùÈaÝ»Ó©\x8dZ¯\xa0\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[16/Apr/2023 18:46:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 19:09:31] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 19:09:31] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 19:12:21] code 400, message Bad request syntax ("Gh0st\xad\x00\x00\x00à\x00\x00\x00x\x9cKS``\x98ÃÀÀÀ\x06Ä\x8c@¼Q\x96\x81\x81\tH\x07§\x16\x95e&§*\x04$&g+\x182\x94ö°00¬¨rc\x00\x01\x11\xa0\x82\x1f\\`&\x83ÇK7\x86\x19ån\x0c9\x95n\x0c;\x84\x0f3¬èsch¨^Ï4'J\x97©\x82ã0Ã\x91h]&\x90øÎ\x97SËA4L?2=áÄ\x92\x86\x0b@õ`\x0cT\x1f®¯]")
+[16/Apr/2023 19:12:21] "Gh0st­   à   xKS``ÃÀÀÀÄ@¼Q	H§e&§*$&g+2ö°00¬¨rc  \`&ÇK7ån9n;3¬èsch¨^Ï4'J©ã0Ãh]&øÎSËA4L?2=áÄ@õ`T®¯]" 400 -
+[16/Apr/2023 20:32:02] code 400, message Bad request syntax ('MGLNDD_8.130.119.231_443')
+[16/Apr/2023 20:32:02] "MGLNDD_8.130.119.231_443" 400 -
+[16/Apr/2023 21:50:24] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03b$ÎPðÂþå\x96|ú\x85\x1cA°?\xa0km\x0bw\x87=\x9cxv0i\x19mFÀ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 21:50:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:50:29] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03_\x9fê%\x1d\x8f(·®©¬\x87¸\t0}jûÖ\x87g\x0b\x1c»VO®\xa0\x04S·\\\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[16/Apr/2023 22:50:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:51:32] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03Ì\x98d\x8bp¹{FX\x0bY\x1d=îKÏlôÔ1\x9c¿ºë\x8e\x90à\x87!ª\x92  \x8aÕ\x05\x0cS\x0e¸y\x9a\x9b@Ð\xa0\x05z¶Xî\x18H|\x0cwÃ8\x01jÄ·á!\x86\x00&Ì©Ì¨À+À/À,À0À\tÀ\x13À')
+[16/Apr/2023 22:51:32] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:10] code 400, message Bad HTTP/0.9 request type ('PÖ\x9f;oB.ñ|Ø\x88\x8e\x17µ,\x0eç\x8e[»Çª\x19»}&Ø\x10Ëª\x19»Æ®[»Çª\x1a³Çª\x19»Çª\x19»mª\x19»Çª2\x90Çª\x19»ïª\x19»Çª\x19»Çª\x19»Çª\x19»Æ«\x19»Çª\x0f»Çª\x19»Çª\x19»Çª\x19»Çª\x19»Çª')
+[16/Apr/2023 22:54:10] "PÖ;oB.ñ|Øµ,ç[»Çª»}&ØËª»Æ®[»Çª³Çª»Çª»mª»Çª2Çª»ïª»Çª»Çª»Çª»Æ«»Çª»Çª»Çª»Çª»Çª»Çª»Çª»Çª» " 400 -
+[16/Apr/2023 22:54:11] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x036Ç')
+[16/Apr/2023 22:54:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:11] code 400, message Bad request version ('\x86')
+[16/Apr/2023 22:54:11] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:12] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03vý\x80áõËï\x83\x17à°\x9a\x81(@Tñ\x8c\x9d\x80h\x9a\x8aB\x0bv<\x9a\x89\x10±ä ¿e¸NFÂ*éGmùÅöóØR¦ <Ê\x0b³·éGüHßþ\x14è \x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[16/Apr/2023 22:54:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:12] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03\x8c ð\x1cVK³6\x18a÷|çAy¡\x12"Ö¶èôºh\x10¶\x96·\x8d\x1aó\x0f ï&ÈT\x96\x00å\x95\x1c·ë\x85\x0e\x10Ôñ±\x9e\xadz!#¯*òPyÍ\x1fBÐF\x00\x8a\x00\x05\x00\x04\x00\x07\x00À\x00\x84\x00º\x00A\x00\x9dÀ¡À\x9d\x00=\x005\x00\x9cÀ\xa0À\x9c\x00<\x00/\x00')
+[16/Apr/2023 22:54:12] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:13] code 400, message Bad request syntax ('\x16\x03\x03\x01W\x01\x00\x01S\x03\x03~ ¸³îä\\ÁÄ\x13»:,Â;\x97\x83ô\x1e@§±f\x90a®Î\x1b\x9eö1K \x9châ\x8d¶O\x06ü^/Ý\x07/;\x8b\x9fdÀ')
+[16/Apr/2023 22:54:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:13] code 400, message Bad request syntax ("\x16\x03\x03\x01I\x01\x00\x01E\x03\x03S\x80å\x1bA3\x0bñ\x1aX\x8a>Ö\x0f\x18Gi\x82\x85Ptî}nùe\x19üÍy±Æ Ii\x8b¹íÖ¹DEÖ\x91ý=wâ±T\x9b-ö`ÞUÄ\x01\\ùy\x7fQ\x0f\x85\x00DÀ\x13À'À/À\x14À(À0À`ÀaÀvÀwÌ¨\x13\x05\x13\x04\x13\x03Ì\x13À\x11\x00")
+[16/Apr/2023 22:54:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:14] code 400, message Bad request version ("\x9abð\x19\x88a\x96<Cë)¢Ïé\x8aõó\x00\x8cªªÀ\x12À\x13À\x07À'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À")
+[16/Apr/2023 22:54:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:14] code 400, message Bad request syntax ('\x16\x03\x02\x01\x9b\x01\x00\x01\x97\x03\x02ÿ¢s¿ðzº\\Ó!Æ9Íß\x11Ï\x19¥\x0f\'1ér\x0eÈ(\x0c\x85®7¤¶ Ñ\x9b®Ì\x12\x18"k:\x07ª¥ìEs°ó\xa0W|\\Hv¢Us1£H¶?ë\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[16/Apr/2023 22:54:14] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:15] code 400, message Bad request syntax ('\x16\x03\x01\x01¨\x01\x00\x01¤\x03\x03{]h\x03£ïP\x8eRé¯ñ\x19râT6²E4F\x105\x96Ø¹Çk+\'\xadù ð\x13¼¹\x03\rSö\x89Ö³4\x8aytà$2"^¥öù\x96Çax&\x84Ém\x03\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[16/Apr/2023 22:54:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:15] code 400, message Bad request version ('ìÖ»½Ïks5\x95¾Ù\x08Ô\x83+éôBü.')
+[16/Apr/2023 22:54:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:16] code 400, message Bad request syntax ('\x16\x03\x01\x01\x9e\x01\x00\x01\x9a\x03\x03.QÐp`\x16\x9d\x06a\x91\x06\x87;q²ÉQ`TzJ;ÿ³-Ñý\x7f¹ö·« bØ\x8a»Ûj\x16;l¶4\x1e\x87\x86\xad|FU\x82*Dæ\x83\x0b\r1nûØÚsl\x00\x80\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[16/Apr/2023 22:54:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:16] code 400, message Bad request syntax ("\x16\x03\x01\x01µ\x01\x00\x01±\x03\x03+\x13¿kæK¥\x91±@5FNÏ\x07òË^b^6´+\x90·\x95®\x1aÙÐ\x84R \x1aLÿ\x9fµ£V\x15m\rðçM^¸åò@\xa0X\x15Iog\x84V;ê£è\x04\x82\x00\x8cÊÊÀ\x12À\x13À\x07À'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À")
+[16/Apr/2023 22:54:16] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:17] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 22:54:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:17] "GET / HTTP/1.1" 200 23106
+Not Found: /private/api/v1/service/premaster
+[16/Apr/2023 22:54:18] "GET /private/api/v1/service/premaster HTTP/1.1" 404 2778
+[16/Apr/2023 22:54:19] code 400, message Bad request version ('À\x14À')
+[16/Apr/2023 22:54:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:19] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03\x07ÇÌn\x80\x9f<ÆÁ\x1d×u(ÇKx\rJ\x1a÷4°\x10p\x0c;\x1f\x0c\x9e#µ\x12\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 22:54:19] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 22:54:20] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03È\x81*\x06º¼ô\x14\x03\x1bÔ\x9fº¦\x1d(ã¿\x87\xa0\x86°Í(\\\x89\x95Ï.\x90ÿé\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[16/Apr/2023 22:54:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[16/Apr/2023 23:57:40] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 23:57:40] "GET /static/images/logo.png HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET /static/images/s-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET /static/images/s-3.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET /static/images/s-4.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET /static/images/s-5.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET /static/images/s-6.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:40] "GET / HTTP/1.1" 200 23106
+[16/Apr/2023 23:57:41] "GET /static/images/d-1.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:41] "GET /static/images/d-2.jpg HTTP/1.1" 304 0
+[16/Apr/2023 23:57:41] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 23:57:41] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 23:57:41] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 23:57:41] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[16/Apr/2023 23:57:42] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[16/Apr/2023 23:57:44] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+Not Found: /favicon.ico
+[16/Apr/2023 23:57:47] "GET /favicon.ico HTTP/1.1" 404 2715
+[17/Apr/2023 00:04:48] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x04D¿pa³ü¯\x1f1\x90ÃC\x95\x9f\x9c\x81ò}´¼*\x19 Ûª\x1cy\x955\x9cvé\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Apr/2023 00:04:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 00:19:13] "GET /static/images/s-1.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:13] "GET /static/images/s-2.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:13] "GET /static/images/s-4.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:13] "GET /static/images/s-3.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:13] "GET /static/images/about-img.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:13] "GET /static/images/logo1.png HTTP/1.1" 304 0
+[17/Apr/2023 00:19:13] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 00:19:14] "GET /static/images/s-5.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:14] "GET /static/images/s-6.jpg HTTP/1.1" 304 0
+[17/Apr/2023 00:19:14] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 00:19:14] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 00:19:14] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 00:19:14] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+Not Found: /favicon.ico
+[17/Apr/2023 00:19:18] "GET /favicon.ico HTTP/1.1" 404 2715
+[17/Apr/2023 00:19:22] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[17/Apr/2023 00:19:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 00:46:24] code 400, message Bad request syntax ("\x16\x03\x01\x00Ê\x01\x00\x00Æ\x03\x03CÇpÔå½\x01\x85víèðz%z3\x1d\x89\x1cx\x9fQhE\x9b\x1c¢öüO\x87\x1a\x00\x00hÌ\x14Ì\x13À/À+À0À,À\x11À\x07À'À#À\x13À\tÀ(À$À\x14À")
+[17/Apr/2023 00:46:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 00:49:02] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03Üb\x8asØ\x1f\x9cn\x87GÅ/Èãênñj2ÐÖ\x981³a\x16¬ÜA0\x11w\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 00:49:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 00:59:37] code 400, message Bad request version ("\x05\x8f\x00\x00VÀ,À+À0À/\x00\x9f\x00£\x00\x9e\x00¢À$À(À#À'\x00k\x00j\x00g\x00@À.À2À-À1À&À*À%À)À")
+[17/Apr/2023 00:59:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:24] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03¹ÏfÔ|âXX¦\x06"â\x9da¯:ð§Ôø§² w\x0e\x9a\x04:\x1c\x0eð\x1b ÿ}t\x03hP\x89\rÃÑ\x10u)Æ^I\x9f®\x96X ©\x1cmý}\x19f".¸)\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 01:02:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:24] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 01:02:24] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03+z´dÍ>õ?Çõg\x16\x1fÅ\x88þ?¬Lî\x99fH\x82\x0cb\x90î×Ü\x1bB |®?\x1a¹d\x8f¬iËÄ1ÌÖ\x85¤=þ\x17¥ì\x90Ô¿æl¼!\x94ÿ\x16P\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 01:02:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:24] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x81X¼çã\x11Ð\x95\x97êþ5¹2wÕ(\x17£\x8f*$ròÖ\x89æúÙÐNË 'F½ê¼#íkÅ\x1cs^z\x16ÚöôW!·\x00¦\xa0%#ýFæ#\x00ÿ\x89\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À")
+[17/Apr/2023 01:02:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:25] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03í^íMÜÑ\r\x12êè<\x93Û\x82y¹G\x80\x02d*¿ssE4L!b³\x0cÑ \x17î~ò¦º\x8cH2«|óß\x12øùe\x16\x1bd^Fø¥\x02\x86\x83í\x93\x08\x8f\x14\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 01:02:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:25] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x033\xad©\x9712Ê')
+[17/Apr/2023 01:02:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:26] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x03¨t5e \x9eQE\x86F«»Õýs3Ëq¡m\x98³êK\x8b×>\x04W\x0cí Ñ¾W\x8c¦\x87]»\x81\x98Ë\x9c\x10'¼\x7f\x06nn\x94\x91çÆ\x86k\x02p7¹\x8d¤5\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À")
+[17/Apr/2023 01:02:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:02:26] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x05õ)O]]\x98H¾C*\x88æÌ\x9dÑO-]\x07\x94dWDwû\x1f\x0e´Îr_ U\x1cÒ¹ó×@¬Â:³%\'ä÷àÐ"\x97\x9b`ô\'eX\x10$Î\x03>\x18â\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 01:02:26] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:04:28] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03²aÃ\x13Á\x16ÉÉ\x04O\x8c\x97´\x14xCWí\x00\x93h\x96NK')
+[17/Apr/2023 01:04:28] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:04:29] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x01H\x9bö{È\x05_=*Gü*ßÙH')
+[17/Apr/2023 01:04:29] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:25:51] code 400, message Bad request syntax ('\x16\x03\x01\x00\x9d\x01\x00\x00\x99\x03\x03\x06\x0e?\x8e\x15\x1fRÌªïU\xa0;U Ððu\x9e\x8fyL1Áú]}Õ\x9cn¶-\x00\x00BÀ\x11À\x07À\x13À\tÀ\x14À')
+[17/Apr/2023 01:25:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 01:32:59] code 400, message Bad HTTP/0.9 request type ("\x16\x03\x01\x00{\x01\x00\x00w\x03\x03®wª¦ÞIì\x95ï\x8c\x97'×bñ~¬©êÁ\x98ø\x06Ö,;ÜæduÜ¶\x00\x00\x1aÀ/À+À\x11À\x07À\x13À")
+[17/Apr/2023 01:32:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 02:44:20] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Apr/2023 02:44:20] " Pg)§ê " 400 -
+Invalid HTTP_HOST header: 'passport.baidu.com:80'. You may need to add 'passport.baidu.com' to ALLOWED_HOSTS.
+Bad Request: /http:/passport.baidu.com/
+[17/Apr/2023 02:44:31] "GET http://passport.baidu.com/ HTTP/1.1" 400 61993
+[17/Apr/2023 02:44:32] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Apr/2023 02:44:32] " " 400 -
+[17/Apr/2023 02:47:09] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03\x9a3}Ö(.\x91q\x0b\x83ñ\x0eÄpþ1\x8fÓ\x98çKì÷dãÐ\x0bïçâqà\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 02:47:09] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 03:27:17] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03èê\x7f\x88\x14\x9cÄ4=\x7f½»+\x83')
+[17/Apr/2023 03:27:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 03:54:02] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[17/Apr/2023 03:54:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 03:59:37] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03÷¢%X\x89h=Ù\rýåY¡OH¸B@<rÃE\x1f5\x02E" ÏuFµ\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Apr/2023 03:59:37] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 04:00:34] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 04:20:40] code 400, message Bad request version ('À\x14À')
+[17/Apr/2023 04:20:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 04:47:41] code 400, message Bad request syntax ("\x16\x03\x01\x01 \x01\x00\x01\x1c\x03\x03s\x87\x16ïsÈ\x94\x86\x81L`^9\x01e©W0\x9a'ÈE\x88îTÞé@\x861n\x03 Âû\\-LÖøGé,Ã¨¦ú;ìI\x84P\x9dÄM\x18+µ5gw\x1eb\x03\x80\x00>\x13\x02\x13\x03\x13\x01À,À0\x00\x9fÌ©Ì¨ÌªÀ+À/\x00\x9eÀ$À(\x00kÀ#À'\x00gÀ")
+[17/Apr/2023 04:47:41] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 05:12:51] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00×\x01\x00\x00Ó\x03\x03ÅR`·\x9d%')
+[17/Apr/2023 05:12:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 06:08:57] code 400, message Bad request version ('Ý+\x83\x89î\x95¿H$')
+[17/Apr/2023 06:08:57] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 06:22:03] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 06:22:03] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[17/Apr/2023 06:22:03] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[17/Apr/2023 06:22:03] "GET /static/css/style.css HTTP/1.1" 200 17399
+[17/Apr/2023 06:22:03] "GET /static/js/custom.js HTTP/1.1" 200 408
+[17/Apr/2023 06:22:04] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[17/Apr/2023 06:22:05] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[17/Apr/2023 06:22:05] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[17/Apr/2023 06:22:06] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[17/Apr/2023 06:22:06] "GET /static/images/square.png HTTP/1.1" 200 406
+[17/Apr/2023 06:22:06] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 06:22:06] "GET /static/images/client.jpg HTTP/1.1" 200 18945
+[17/Apr/2023 06:22:06] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[17/Apr/2023 06:22:09] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[17/Apr/2023 06:22:17] "GET /static/images/s-2.jpg HTTP/1.1" 200 159744
+[17/Apr/2023 06:22:17] "GET /static/images/s-1.jpg HTTP/1.1" 200 225280
+[17/Apr/2023 06:22:17] "GET /static/images/s-3.jpg HTTP/1.1" 200 229376
+[17/Apr/2023 06:22:27,509] - Broken pipe from ('39.144.85.207', 51909)
+
+[17/Apr/2023 06:22:27] "GET /static/images/about-img.jpg HTTP/1.1" 200 167936
+[17/Apr/2023 06:22:40] "GET /price/ HTTP/1.1" 200 8483
+[17/Apr/2023 06:22:40] "GET /price/ HTTP/1.1" 200 8483
+[17/Apr/2023 06:22:40] "GET /static/images/phone.png HTTP/1.1" 200 385
+[17/Apr/2023 06:22:40] "GET /static/images/location.png HTTP/1.1" 200 456
+[17/Apr/2023 06:22:40] "GET /static/images/mail.png HTTP/1.1" 200 358
+[17/Apr/2023 06:50:51] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03GàÙåZÇgRv°IT®\x10_\x8e!Ò"\xad¥ü7þîÁç±¼õú\x8c\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 06:50:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 06:56:29] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Apr/2023 06:56:29] " Pg)§ê " 400 -
+Invalid HTTP_HOST header: 'passport.baidu.com:80'. You may need to add 'passport.baidu.com' to ALLOWED_HOSTS.
+Bad Request: /http:/passport.baidu.com/
+[17/Apr/2023 06:56:50] "GET http://passport.baidu.com/ HTTP/1.1" 400 61992
+[17/Apr/2023 06:56:53] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Apr/2023 06:56:53] " " 400 -
+[17/Apr/2023 06:59:25] "GET /price/ HTTP/1.1" 200 8483
+[17/Apr/2023 07:02:25] code 400, message Bad request version ('À\x13À')
+[17/Apr/2023 07:02:25] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 07:02:48] code 400, message Bad request version ('>Ì\x9c=\x0fvÅk\x99©\x83yË\x8eÄÆ')
+[17/Apr/2023 07:02:48] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 07:02:54] "OPTIONS / HTTP/1.0" 200 23106
+[17/Apr/2023 07:21:30] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03¨¾A\x85Ä¸#\x13&\x83F\x9b=Û¿Û\x84¡ÿÑ\x0bZ¥¡\x94\x16\x1bâ\'\x03\x92á ÖÑ \x84\x9e»ÀÝw(Ô9¤#±\x1e\x86\x1f\x15\x19cWÃ\x1fxF\ræ£4|\x93\x00"úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x00')
+[17/Apr/2023 07:21:30] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 07:53:24] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 07:53:24] "GET /static/css/style.css HTTP/1.1" 200 17399
+[17/Apr/2023 07:53:24] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[17/Apr/2023 07:53:24] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[17/Apr/2023 07:53:24] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[17/Apr/2023 07:53:24] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[17/Apr/2023 07:53:24] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[17/Apr/2023 07:53:24] "GET /static/images/square.png HTTP/1.1" 200 406
+[17/Apr/2023 07:53:24] "GET /static/js/custom.js HTTP/1.1" 200 408
+[17/Apr/2023 07:53:31] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[17/Apr/2023 07:53:32] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[17/Apr/2023 07:53:32] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[17/Apr/2023 07:53:35] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[17/Apr/2023 07:53:35] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[17/Apr/2023 07:53:36] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[17/Apr/2023 07:53:37] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[17/Apr/2023 07:53:41] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[17/Apr/2023 07:53:42] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 07:53:42] "GET /static/images/next-white.png HTTP/1.1" 200 231
+[17/Apr/2023 07:53:42] "GET /static/images/prev-white.png HTTP/1.1" 200 227
+[17/Apr/2023 07:53:42] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[17/Apr/2023 07:53:42] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 07:53:42] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 07:53:42] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[17/Apr/2023 07:53:42] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 07:53:42] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 07:53:42] "GET /static/images/client.jpg HTTP/1.1" 200 18945
+[17/Apr/2023 07:53:42] "GET /static/images/phone.png HTTP/1.1" 200 385
+[17/Apr/2023 07:53:42] "GET /static/images/location.png HTTP/1.1" 200 456
+[17/Apr/2023 07:53:42] "GET /static/images/mail.png HTTP/1.1" 200 358
+Not Found: /favicon.ico
+[17/Apr/2023 07:53:47] "GET /favicon.ico HTTP/1.1" 404 2715
+[17/Apr/2023 07:56:28,765] - Broken pipe from ('223.104.102.206', 16665)
+
+[17/Apr/2023 07:56:28,785] - Broken pipe from ('223.104.102.206', 62013)
+
+[17/Apr/2023 07:56:28,785] - Broken pipe from ('223.104.102.206', 62003)
+
+[17/Apr/2023 07:56:28,786] - Broken pipe from ('223.104.102.206', 16675)
+
+[17/Apr/2023 07:56:28,786] - Broken pipe from ('223.104.102.206', 61777)
+
+[17/Apr/2023 07:56:28,786] - Broken pipe from ('223.104.102.206', 62012)
+
+[17/Apr/2023 08:24:03] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03?ú\\¿«?]7Á\x0b_uéï³\x83Ñ¶²Íw\x0b+¦YÝR\r\x0fÆ\x0cu ¡#\x90ô¦¹ÃDÛ«lH¶"ãGP(¡B\x91\x8c\x85K#\x9c\x92Ñ[\x94J\x87\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[17/Apr/2023 08:24:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:04] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03\x0c>×\x0b9:{\x92Ni²\x96ùcèÈÄ}É<$NÑ\xad¾¸ü¬\x08cÞ\x01 \x84·±\x06\x97V`mu\x9co\x16Ø\x04þáýO\x05»æöI\x91¨hXJ\x0b®ø\x14\x00\x8a\x00\x05\x00\x04\x00\x07\x00À\x00\x84\x00º\x00A\x00\x9dÀ¡À\x9d\x00=\x005\x00\x9cÀ\xa0À\x9c\x00<\x00/\x00')
+[17/Apr/2023 08:24:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:04] code 400, message Bad request syntax ("\x16\x03\x03\x01W\x01\x00\x01S\x03\x03Ã\x9dÍëÄ%[¿\x17ã\x89\x01¼\x0fÿ{£.-À\x837L\x99\t!E$ÿlN\x04 xä×OMº\x83à0\x1a[<\x01N\x9e§\x83\x0bì~}Z»{¡£É¯'\x9dÙ \x00FÀ\x12À\x07Ì\x14\x13\x01\x13\x02Ì©ÀsÀrÀ,À¯À\xadÀ$À")
+[17/Apr/2023 08:24:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:05] code 400, message Bad request syntax ("\x16\x03\x03\x01I\x01\x00\x01E\x03\x03tuþUÔ6»Æ(;\x8däéÆ\x0eÊÔ%ÌW.N¼\x1bä,Æ5ô\x05ÑÌ ¼\x88\x0bjðS\x03x\x1erý[R\x16¹è\x0eHN\x8d\x81\x93\x12\x9cÒ\x9d\x94\x9fnx?¢\x00DÀ\x13À'À/À\x14À(À0À`ÀaÀvÀwÌ¨\x13\x05\x13\x04\x13\x03Ì\x13À\x11\x00")
+[17/Apr/2023 08:24:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:05] code 400, message Bad request syntax ("\x16\x03\x03\x01\x9a\x01\x00\x01\x96\x03\x03\x04ZRYx\x06î\x06S\x83Òw\x83\x85©\x00\x0f\x08`5\x02ÍXX2J\x15G\x96\x00\x0cî iÒ®\x90BÃv´ùõ\x97Á7ú¸m\x0bÃ9\x08\x86â5ë\x03Ì[k\x11té\x06\x00\x8cÚÚÀ\x12À\x13À\x07À'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À")
+[17/Apr/2023 08:24:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:06] code 400, message Bad request syntax ('\x16\x03\x02\x01\x9b\x01\x00\x01\x97\x03\x02\rFÒÌsò«1ó_}Ù\xadÄ\x8d6ú|·Î8yúP\x83ê^óå\x80ÙA \x93\x94\x9a\x03\x8dÏ¬ÍÒ~¸\x1d`\x88\x16\x11ä8»s\x10)\x19¯\x0b$Â\x801º}\x84\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[17/Apr/2023 08:24:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:07] code 400, message Bad request version ('À#À¬À®À+À')
+[17/Apr/2023 08:24:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:07] code 400, message Bad request syntax ('\x16\x03\x01\x01¨\x01\x00\x01¤\x03\x03Ùç¶\x11\x86µ!\x87*\x83ûÙ\x17Cn\x82cô\x9b\x1f\x07õ\x0c6\x97T\x90\x83Mëîä \x8eyØaðB\x1d*Ë\x92¹åÊ7NµtØTÉäNªæ\x1a\x89à\x0cÌ\t¸÷\x00\x8a\x00\x05\x00\x04\x00\x07\x00À\x00\x84\x00º\x00A\x00\x9dÀ¡À\x9d\x00=\x005\x00\x9cÀ\xa0À\x9c\x00<\x00/\x00')
+[17/Apr/2023 08:24:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:08] code 400, message Bad request syntax ("\x16\x03\x01\x01\x9e\x01\x00\x01\x9a\x03\x03C#\x87\x16iWkø\x080'h\xad¹0B\xad\x1d\x80Ó\x8e^&`\x9b|£;\x85ûÞ\x02 \x8bÜ\x14UÑÏ=äÒÿÅ=þºóv[\x9dõ\x87\x8cÈë\x90·Ì\x95\x87ÖÆ\x13=\x00\x80\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À")
+[17/Apr/2023 08:24:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:24:08] code 400, message Bad request syntax ('\x16\x03\x01\x01µ\x01\x00\x01±\x03\x030îí\x8bù3zªËåÊ¿3)ÀC\x80[Âëq"u\x98\x0fÞ\x1bL\x16Vu` *\x17Ã\x0e\x13Ò\x85Ói·g\x93Ý^«\tfå\x00fI\x97Äî\\Bw»"ß\x84\x11\x00\x8c\x9a\x9aÀ\x12À\x13À\x07À\'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À')
+[17/Apr/2023 08:24:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:27:57] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03Ö¯%LOåyïÌd\x1bþ$\x01z\x01ý\x05Õg§*nß\x94¿g)\x14@Ál å\x93\x8f\\e¹ð*É²\x054D\x8c\x03\t/5\x8a\x1f]Ü>\x85\x1fÇ\x8a@«zÅæ\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[17/Apr/2023 08:27:57] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:27:57] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03vµ0d¥\x04')
+[17/Apr/2023 08:27:57] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:27:58] code 400, message Bad request syntax ('\x16\x03\x03\x01W\x01\x00\x01S\x03\x03§\x98\x169q&:h¾u:ÉHîRTÙL\xa0övT^;^\x1eàñ_Ü¬£ ×^7?')
+[17/Apr/2023 08:27:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:27:59] code 400, message Bad request version ("O^7\x19h$wÒ\x9677-\x96[qÍ¾Ý\x87é·÷¶\\@«x\x11|t\x91Î\x00DÀ\x13À'À/À\x14À(À0À`ÀaÀvÀwÌ¨\x13\x05\x13\x04\x13\x03Ì\x13À\x11\x00")
+[17/Apr/2023 08:27:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:27:59] code 400, message Bad request syntax ('\x16\x03\x03\x01\x9a\x01\x00\x01\x96\x03\x03\x15$¿¹½óîJõ\'¼V\x1eqQùÄ\x7f*;b\\yÁ\x04\x1c\x06\x12\x95ßÑ  \tÐ\x87ºû^\xadg#ëwÙ}*o\x99\x92òf\x87\x92¹"`k\x82\x06·\x90ò\x1a¼\x00\x8c\x1a\x1aÀ\x12À\x13À\x07À\'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À')
+[17/Apr/2023 08:27:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:28:00] code 400, message Bad request syntax ('\x16\x03\x02\x01\x9b\x01\x00\x01\x97\x03\x02Ù~£¾e\x94ÝÓZ\x7fÐX@\x19ç\x96pn2Yr\x1c·ù\xa0ÂÊæ¥ºâÃ =JýLH\x92\x03Õ%\x8dL\x13,"GDîF \x95_\x8eS0}¢\x00\x97Ä\x03\x9e_\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À')
+[17/Apr/2023 08:28:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:28:00] code 400, message Bad request syntax ('\x16\x03\x01\x01¨\x01\x00\x01¤\x03\x03?_J\x82\xa0,è¬Åõ0U]\x95ÍGéÅ \x14Ò£\xa0cÖ:½N\x9b')
+[17/Apr/2023 08:28:00] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:28:01] code 400, message Bad request syntax ('\x16\x03\x01\x01¨\x01\x00\x01¤\x03\x03$\x01ßF\x82I\x80\x02ò\x11ÂØcyK¯"\x8a8aý>\x1c«>ñx®u\x95ö¿ BàfQg²Þ\x88xgï=Ç\x9cÒJ\x8b¡eû\x10P\x18eÇ\x08ð¸ëV\t¼\x00\x8a\x00\x05\x00\x04\x00\x07\x00À\x00\x84\x00º\x00A\x00\x9dÀ¡À\x9d\x00=\x005\x00\x9cÀ\xa0À\x9c\x00<\x00/\x00')
+[17/Apr/2023 08:28:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:28:01] code 400, message Bad request syntax ('\x16\x03\x01\x01\x9e\x01\x00\x01\x9a\x03\x03uWÅ=®GÞÜ')
+[17/Apr/2023 08:28:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:28:02] code 400, message Bad request syntax ("\x16\x03\x01\x01µ\x01\x00\x01±\x03\x03\x16!äP\x17}\x10è\x82a¨¨\x16\x9c\x83°\x1eá;o/ª\x8bùÞWÏ[Þz\x1eX F¹\x1a\x16ë§+5FÎè\x84ÓY¯Æ\x89\x97Ñ\x7fæ²Àtò\x02\x08ègÈ£A\x00\x8cZZÀ\x12À\x13À\x07À'Ì\x14À/\x13\x01À\x14\x13\x02À(Ì©À0ÀsÀ`ÀrÀaÀ,ÀvÀ¯ÀwÀ\xadÌ¨À$\x13\x05À")
+[17/Apr/2023 08:28:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:35:02] code 400, message Bad request version ('ú)ðUÏ\x90Ù')
+[17/Apr/2023 08:35:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 08:54:01] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03_½ÂØ\x85ËË\x86Øl\x16ùNëÄ%Ï\x8efÚ\x123\x1a9\x19¢NG?`ùb\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 08:54:01] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 10:42:24] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 10:48:46] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03g?²tgx3,ö#\x1cv\x02\x89%è\x9e°ß¸<\x8a%8Kùlû#VÞ¶ Wç\x8c\x87\x0b\x96¸\xa0U\x032aî6~\x178w"0¿ÀM÷\x15$ý\x9fñm1Û\x00&Ì©Ì¨À+À/À,À0À\tÀ\x13À')
+[17/Apr/2023 10:48:46] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 10:59:56] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 10:59:57] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[17/Apr/2023 10:59:58] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 10:59:58] "GET /static/images/about-img.jpg HTTP/1.1" 200 217088
+[17/Apr/2023 10:59:58] "GET /static/images/s-3.jpg HTTP/1.1" 200 143360
+[17/Apr/2023 10:59:58] "GET /static/images/s-1.jpg HTTP/1.1" 200 77824
+[17/Apr/2023 10:59:58] "GET /static/images/hero-bg.jpg HTTP/1.1" 200 77824
+[17/Apr/2023 10:59:58] "GET /static/images/s-2.jpg HTTP/1.1" 200 77824
+[17/Apr/2023 11:11:27] code 400, message Bad request syntax ('\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x07ÔKN\x80»@\x91¬§,Ý¹\xad\x9d\x86¢¨\x1e\x9d*Xà\x1cÄyÂUs,\x89¿ I4\x1d\x00\x965)ñä§\x91\x07\x0fFAª2\x90ÎUÐÄâUèÈ\x86=<Ò[')
+[17/Apr/2023 11:11:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+Invalid HTTP_HOST header: 'passport.baidu.com:80'. You may need to add 'passport.baidu.com' to ALLOWED_HOSTS.
+Bad Request: /http:/passport.baidu.com/
+[17/Apr/2023 11:35:02] "GET http://passport.baidu.com/ HTTP/1.1" 400 61992
+[17/Apr/2023 11:35:36] code 400, message Bad request syntax ('\x04\x01\x00Pg)§ê\x00')
+[17/Apr/2023 11:35:36] " Pg)§ê " 400 -
+[17/Apr/2023 11:36:17] code 400, message Bad request syntax ('\x05\x01\x00')
+[17/Apr/2023 11:36:17] " " 400 -
+[17/Apr/2023 12:06:13] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03\x14\x1e\x85YÊô¬>k¬c²|UõÉ·E¦j¿W\x84øúw²\x9cÄõ\rµ\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 12:06:13] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 12:57:15] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03\x8bø°Ue=\x13\x93\x9fØÄMå\x8ej!n¹\x8e\x00\x8b\x12¬ycZ¢§\x94ÅØ#\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 12:57:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 13:54:29] code 400, message Bad request syntax ('\x03\x00\x00\x13\x0eà\x00\x00\x00\x00\x00\x01\x00\x08\x00\x02\x00\x00\x00')
+[17/Apr/2023 13:54:29] "  à          " 400 -
+[17/Apr/2023 14:23:35] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x00É*ýB\x19úÿå\x07Õ%åvªñ&;þ\x11Ñ±\x00\x05z¾~é²ôÂf¾\x00\x00\x16À\x11À\x07À\x13À')
+[17/Apr/2023 14:23:35] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 14:24:08] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00c\x01\x00\x00_\x03\x01(è\x02\x9d\x87©×|°\x15\x8cHë~§t\x9e\x89ª¸òÕ;;9-ú`Koú\x00\x00\x00\x16À\x11À\x07À\x13À')
+[17/Apr/2023 14:24:08] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 15:09:27] code 400, message Bad request syntax ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03â@àb3u\x06¢ØS4)YÃ\x99\x96x®=×uqd\x95Pb{\x17ÔE\x9eý I\x16\x877:qØ\x1fÞ\x7fÝ\x97\x13_Ò{\x06\x05C\x1aÕ»\x14ß\x98\x87%a\x18óAi\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 15:09:27] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 15:50:36] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ã\x89\x98{\x83gj\x12\x13\t^zá¹Â!§g\x13\x19\x07,t«Æ9Áæ+Î\x9a+ =j\x95¾Ù\x9b¹9Ü!\x12\x1c8Gsôª\xa0:p\x1e\x95N<Â>\x056A;B¬\x00&Ì¨Ì©À/À0À+À,À\x13À\tÀ\x14À')
+[17/Apr/2023 15:50:36] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 15:50:37] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 15:50:37,751] - Broken pipe from ('167.248.133.124', 36558)
+
+[17/Apr/2023 15:50:39] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 15:50:39] code 505, message Invalid HTTP version (2.0)
+[17/Apr/2023 15:50:39] "PRI * HTTP/2.0" 505 -
+Not Found: /favicon.ico
+[17/Apr/2023 15:50:40] "GET /favicon.ico HTTP/1.1" 404 2715
+[17/Apr/2023 16:30:39] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03¼¡H\x80Áó\x12®\x10N\xa0÷¢\x9aY\x98ü¯Ùp,òì\x17Ó\x1fº9\\t\r\x99\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 16:30:39] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 16:46:22] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03ª\x94u}8Ö\x91*\x1eÿFv³£P08\x03M\x03T\x07£ñ*ðuGH\x05í_\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 16:46:22] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 16:48:07] code 400, message Bad request syntax ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03fRJ\x1cÿPÿÂäÑmú°é¬\xad\x19Âí\x8f>>¡\x8f\x90\x06Ä#o,ÆÈ ï\x19\x87-®ËùÌ%"ÍÕb³~\x06fH\x13\x94é§á;ý\x0b\x03ã\x07Azÿ\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 16:48:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 16:58:04] code 400, message Bad request version ('À\x14À')
+[17/Apr/2023 16:58:04] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 16:59:49] code 400, message Bad request syntax ("\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03å\x80\x91B±Fu\x17R\x1bø\x958ûÓ2\x162\x00#ÍãVÔñ\x19Þ\x03ÓË>Ì (`\x01|G?\x0c\x9bÔ\x82\x11Q:\x9a'°&b\x87K\x04\x86\x98V/5µ?yâ\x91\x83\x00\x8a\x00\x16\x003\x00gÀ\x9eÀ¢\x00\x9e\x009\x00kÀ\x9fÀ£\x00\x9f\x00E\x00¾\x00\x88\x00Ä\x00\x9aÀ\x08À\tÀ#À¬À®À+À")
+[17/Apr/2023 16:59:49] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 16:59:50] code 400, message Bad request syntax ('\x16\x03\x03\x01¦\x01\x00\x01¢\x03\x03&FsB×öMµ¬\x06\x9cw´§ë±\x13û\x86¼\x92Ã8\x84:ÓÏë\x13>ä\xa0 \x1cÔ:DZúR~\x94CäÅT\x1a\x19z\x1a\x8b¨\x00XrX(¤5£rÍ\x91Ã\x85\x00\x8a\x00\x05\x00\x04\x00\x07\x00À\x00\x84\x00º\x00A\x00\x9dÀ¡À\x9d\x00=\x005\x00\x9cÀ\xa0À\x9c\x00<\x00/\x00')
+[17/Apr/2023 16:59:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 17:28:06] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03/\x0e\x9f\\=\x88þC}Èc\x0fH\x18_¾\x05\x8dOÈakM\x9d¸tãQóv¦<')
+[17/Apr/2023 17:28:06] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 18:23:42] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 18:23:45] code 400, message Bad request syntax ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03ÉZ\x94(1[!{L\x06k²ªay\x1c[Mñ&³æs%üS·-ÃZ²º ø\x88t£J@6\x15\x89i\x05úù×óªz\x82\x01Ï´:¥`\x17\x8aKÀÿË:Q\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À')
+[17/Apr/2023 18:23:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 18:23:45] "GET / HTTP/1.1" 200 23106
+[17/Apr/2023 18:23:45] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00ê\x01\x00\x00æ\x03\x03Â\x84\x7fPn\x99')
+[17/Apr/2023 18:23:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 18:43:39] code 400, message Bad request syntax ('SSH-2.0-Go')
+[17/Apr/2023 18:43:39] "SSH-2.0-Go" 400 -
+[17/Apr/2023 18:49:03] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x01\x96\x01\x00\x01\x92\x03\x03¦Tf')
+[17/Apr/2023 18:49:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 18:49:03] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x01\x96\x01\x00\x01\x92\x03\x03\x99\x12ó«èR\x15~ê\x11\x82rÙ£\x80e3q\x05\x95Ç(ËÜ')
+[17/Apr/2023 18:49:03] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 18:49:40] code 400, message Bad request version ('À\x14À')
+[17/Apr/2023 18:49:40] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 18:51:15] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03Í:³á\x93Aè¹\x84®®âò%7$Õ\x8eù¼Û4\x1d¢Éß\x9f/Ã¸Ré\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 18:51:15] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 19:09:59] code 400, message Bad request version ('À\x14À')
+[17/Apr/2023 19:09:59] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 20:36:53] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[17/Apr/2023 20:36:53] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 20:41:21,100] - Broken pipe from ('194.110.203.85', 64894)
+
+[17/Apr/2023 20:58:44] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03í\x9fÅÎ\rÄ\x7fÅ\x15üCí=\x10öÉ¨\x05¾\x95Ðà\t¦\x9d\x03\x81\x9a+Æ\x9fê\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Apr/2023 20:58:44] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 21:16:02] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[17/Apr/2023 21:16:02] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:01:17] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03g!¹ò¤\x11DèëúøiJ\xa0a\x02 1`0\x13\x80¡Iç@Ä\x08â.ð¹\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Apr/2023 22:01:17] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:02:54] code 400, message Bad request version ('À\x14À')
+[17/Apr/2023 22:02:54] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:14:24] "GET /static/js/custom.js HTTP/1.1" 200 408
+[17/Apr/2023 22:14:24] "GET /static/css/responsive.css HTTP/1.1" 200 3288
+[17/Apr/2023 22:14:24] "GET /static/css/style.css HTTP/1.1" 200 17399
+[17/Apr/2023 22:14:24] "GET /static/css/bootstrap.css HTTP/1.1" 200 192348
+[17/Apr/2023 22:14:24] "GET /static/js/bootstrap.js HTTP/1.1" 200 136798
+[17/Apr/2023 22:14:24] "GET /static/js/jquery-3.4.1.min.js HTTP/1.1" 200 88145
+[17/Apr/2023 22:14:26] "GET /static/images/logo1.png HTTP/1.1" 200 10560
+[17/Apr/2023 22:14:26] "GET /static/images/logo.png HTTP/1.1" 200 9687
+[17/Apr/2023 22:14:26] "GET /static/images/square.png HTTP/1.1" 200 406
+[17/Apr/2023 22:14:27] "GET /static/images/client.jpg HTTP/1.1" 200 18945
+[17/Apr/2023 22:14:29] "GET /static/images/d-2.jpg HTTP/1.1" 200 116381
+[17/Apr/2023 22:14:30] "GET /static/images/d-1.jpg HTTP/1.1" 200 141704
+[17/Apr/2023 22:14:32] "GET /static/images/s-1.jpg HTTP/1.1" 200 276629
+[17/Apr/2023 22:14:33] "GET /static/images/s-2.jpg HTTP/1.1" 200 256346
+[17/Apr/2023 22:14:37] "GET /static/images/s-3.jpg HTTP/1.1" 200 248297
+[17/Apr/2023 22:14:38] "GET /static/images/s-4.jpg HTTP/1.1" 200 205342
+[17/Apr/2023 22:14:38] "GET /static/images/about-img.jpg HTTP/1.1" 200 453849
+[17/Apr/2023 22:14:39] "GET /static/images/u-1.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 22:14:39] "GET /static/images/u-3.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 22:14:40] "GET /static/images/u-2.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 22:14:40] "GET /static/images/u-4.jpg HTTP/1.1" 404 1804
+[17/Apr/2023 22:14:40] "GET /static/images/location.png HTTP/1.1" 200 456
+[17/Apr/2023 22:14:40] "GET /static/images/phone.png HTTP/1.1" 200 385
+[17/Apr/2023 22:14:40] "GET /static/images/mail.png HTTP/1.1" 200 358
+[17/Apr/2023 22:14:40] "GET /static/images/next-white.png HTTP/1.1" 200 231
+[17/Apr/2023 22:14:40] "GET /static/images/prev-white.png HTTP/1.1" 200 227
+[17/Apr/2023 22:14:40] "GET /static/images/s-5.jpg HTTP/1.1" 200 243426
+[17/Apr/2023 22:14:42] "GET /static/images/s-6.jpg HTTP/1.1" 200 313432
+[17/Apr/2023 22:29:45] code 400, message Bad request syntax ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03`\x86ÄÒµnA,\x1a/Ï\x1c½z\x9f\x02öæ\x95\x88Ì·\x90_2\x8b\x1d\x84÷æ\x05:\x00\x00\x1aÀ/À+À\x11À\x07À\x13À\tÀ\x14À')
+[17/Apr/2023 22:29:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:37:36] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x1e¶\xa0\x0fº\x9fbiQÈu§ý\x17L-ª2ãþ\x1bZ(°,õt±à\x92¾{ ê;\x9e\x95æS³d\x94\\q\x7f~3O8K>ûòp^çõiº÷íÂ²×=\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[17/Apr/2023 22:37:36] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:40:24] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x01\x00{\x01\x00\x00w\x03\x03cø²0R6÷\x133\x86Î¾/a>ÑPþ\x9drÍÑ\x9b¤¿\x87ô\x7fJ?¬\x98\x00\x00\x1aÀ/À+À\x11À\x07À\x13À')
+[17/Apr/2023 22:40:24] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:54:34] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03«1©ü \x9b\x04$N5}\x8dá\xa0\t$)xa\x15R}\x81B\x80u\x0f\x8e\x98\x15Aü\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 22:54:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:55:20] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03<\x920ãÙ\x93x«VÆÐ\x8b\x08:ÿ\x9e¹bF\x7f<»éq\x04ÞLïÊð~¥ \x8c\x81\x12U\x9aN¸ñbHë¤m¯ó\x1fºP×2ht£\x18¶ýÎúW\x07ù\xa0\x00&Ì©Ì¨À+À/À,À0À\tÀ\x13À')
+[17/Apr/2023 22:55:20] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:45] code 400, message Bad request syntax ("\x16\x03\x01\x00è\x01\x00\x00ä\x03\x03h\x1eÎ\x02{\x13/C÷)¸þ~''0/5\x8bçÍô¡ã\x0bø\x1e\x98\x8eK¯Ü \tZ`ëîä#y\x1bÛJó©\x87\x16ãÛ-O)\x97\x12u{\x0ciú\x99KÛ¹\x93\x00&À+À/À,À0Ì©Ì¨À\tÀ\x13À")
+[17/Apr/2023 22:56:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:45] code 400, message Bad request syntax ('\x16\x03\x01\x00\xa0\x01\x00\x00\x9c\x03\x03Üþ\x11ä\x94ñL\x85v7\x92\x02\x7fªÔXBF©Ê¨#Qv\x8a:a\x01A¢ÇÙ ßG_;ý?\x9d¤«C\x1f¯ip@\tx\x18ÏD\x9bf\x80,Ô\x81mÚ»ú¶Ú\x00\x08À+À,À\tÀ')
+[17/Apr/2023 22:56:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:45] code 400, message Bad request syntax ("\x16\x03\x01\x00¨\x01\x00\x00¤\x03\x03Ð\x1ctÉ¸Ó\x1aS|\x16.ã´TÆ@å\rº@m\x9e)\x12\x18\x0b'B\x90CMÞ óÉ¯[YÇ·ÑÐk\x97¬6Ù\x148¡½S\x9dpÝ:¶ïxÐW\x90\x19&\x8f\x00\x10À/À0À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x00K\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00")
+[17/Apr/2023 22:56:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:45] code 400, message Bad request syntax ("\x16\x03\x01\x00\x8a\x01\x00\x00\x86\x03\x01N'6y\x8f\x05lCcÕòHy15fC5S!Ó\x1ev9Îf\x122Ö¸\x98: º\x91\x9bK¥\x1dä`uZ«fÃJ*\x1c¡Ì\x1aj±ïnzº¸\x13\x95\x9aù\x8b\x8c\x00\x10À\tÀ\x13À")
+[17/Apr/2023 22:56:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:45] code 400, message Bad request syntax ('\x16\x03\x01\x00\x8a\x01\x00\x00\x86\x03\x02ó\x07\x11W')
+[17/Apr/2023 22:56:45] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:50] code 400, message Bad HTTP/0.9 request type ('\x80%\x01\x00\x02\x00')
+[17/Apr/2023 22:56:50] code 400, message Bad HTTP/0.9 request type ('\x16\x03\x00\x00M\x01\x00\x00I\x03\x00Y\x04B%Ê@¯«·\x83¯RÍG\x95Fø\x15\x0fX³\x13\x07Ô\x90¤>ó\x80\x10R')
+[17/Apr/2023 22:56:50] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 22:56:50] "%         ÀLR_Ýª®'*Î©-" 400 -
+[17/Apr/2023 23:55:07] code 400, message Bad request syntax ("\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03TÚ\x11}#\x0cõ¨Å}\x14ã<^ÞØ'$ÉÁ\x17#\x88zUYmK<ýî§ Tùñ8\x18=v4P\x08uÏ\x18[\x07áõb\x83\x14%û\x1c\x02\x821\x83°\x02ê`Æ\x00&À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À")
+[17/Apr/2023 23:55:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 23:55:07] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03\x9cÝd¶\x94WÏB\r\x04\x8b\x0câC\\R¥õ7\x99®ù\x14àë\x86¡\x06$\x81\x82\x0c @\x19¤3íÁ\x7f\x81a\x00Iôp\x01©a\x93\x86!È\x1a92º¢ÀUt8ÛUñ\x00&À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 23:55:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 23:55:07] code 400, message Bad request syntax ('\x16\x03\x01\x00î\x01\x00\x00ê\x03\x03ÁG¸+\x89ÚFÂê2ôî¾\x1eèB¯ê\x9a=þPE|\x8b\x9b=òÑË7õ `.\x045Ç"¾\x88RPi\x80\x1agÇgí²*È\x18³b\\Ó\x1dóiz\x9eª\x97\x00&À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[17/Apr/2023 23:55:07] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[17/Apr/2023 23:55:07] code 400, message Bad request version ('ICAP/1.0')
+[17/Apr/2023 23:55:07] "REQMOD icap://icap-server.net/server?arg=87 ICAP/1.0" 400 -
+[17/Apr/2023 23:55:08] "GET / HTTP/1.0" 200 23106
+[17/Apr/2023 23:56:07] "GET / HTTP/1.1" 200 23106
+Not Found: /favicon.ico
+[17/Apr/2023 23:56:07] "GET /favicon.ico HTTP/1.1" 404 2715
+[18/Apr/2023 00:51:34] code 400, message Bad request syntax ('\x16\x03\x02\x01o\x01\x00\x01k\x03\x02RHÅ\x1a#÷:Nßâ´\x82/ÿ\tT\x9f§Äy°hÆ\x13\x8c¤\x1c="á\x1a\x98 \x84´,\x85¯nãY»bhlÿ(=\':©\x82ÙoÈ¢×\x93\x98´ï\x80å¹\x90\x00(À')
+[18/Apr/2023 00:51:34] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Apr/2023 00:54:05] code 400, message Bad request syntax ('\x16\x03\x01\x00\x85\x01\x00\x00\x81\x03\x03Ùg½=Ls<òÖ\x98:¥¾b\x08{b£\x13`L\x18Ù\x04ê\x1aC\t\x9b\x8fìõ\x00\x00 À/À0À+À,Ì¨Ì©À\x13À\tÀ\x14À')
+[18/Apr/2023 00:54:05] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Apr/2023 01:20:26] "GET / HTTP/1.1" 200 23106
+[18/Apr/2023 01:20:58] code 400, message Bad request version ('À\x14À')
+[18/Apr/2023 01:20:58] You're accessing the development server over HTTPS, but it only supports HTTP.
+
+[18/Apr/2023 01:39:51] code 400, message Bad request syntax ("\x16\x03\x01\x02\x00\x01\x00\x01ü\x03\x03\x88ê\x0c¸+\x0b¿g,~mx\x01k\x8aL\xa0\x88kJiöK#\x14\x1dÈ\x1cg×\x8eæ \x1b\x0b\xa0M¥b`)ªxFðS\x859ÅC?À\x83Ézè\x06\x18\x0b\x95zÜ¹®\xa0\x00V\x13\x02\x13\x03\x13\x01À,À0À+À/Ì©Ì¨\x00\x9f\x00\x9eÌªÀ¯À\xadÀ®À¬À$À(À#À'À")
+[18/Apr/2023 01:39:51] You're accessing the development server over HTTPS, but it only supports HTTP.
+
